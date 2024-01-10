@@ -7,7 +7,10 @@
 나는 조금 다른 방법을 쓰고 싶다.
 
 ```html
+<form th:action="@{/employee/register}" method="post">
+
 ...
+
 <div class="form-group">  
     <label>주민번호<sup class="text-danger">*</sup></label>  
     <div class="d-flex">  
@@ -16,5 +19,17 @@
         <input type="password" class="form-control" id="residentNo.rearNumber" name="residentNo.rearNumber" maxlength="7" required style="width: 40%;">  
     </div>  
 </div>
+
 ...
+
+</form>
+```
+
+이 Form 안에서 하나의 Employee에 대한 데이터를 입력하고,
+
+```javascript
+const form = document.querySelector('form');  
+const formData = new FormData(form);  
+  
+common.callFetch('/employee/employeeRegister.do', formData)
 ```
