@@ -171,4 +171,20 @@ Mybatis 쿼리에서도 위와 같이 작성하면 `residentNo` 객체 안의 re
     
     ...
 </resultMap>
+
+...
+
+<select id="getEmployeeDetail" parameterType="Integer" resultMap="employeeResultMap">  
+       SELECT  
+           A.PERSON_ID,           
+           A.AFFILIATION,           
+           A.NAME,           
+		   SPLIT_PART(A.RESIDENT_NUMBER, '-', 1) AS RESIDENT_FRONT_NUMBER,                         SPLIT_PART(A.RESIDENT_NUMBER, '-', 2) AS RESIDENT_REAR_NUMBER,    
+		   ...
+	   FROM PERSON_INFO A
+	  WHERE A.PERSON_ID = #{personId}   
+</select>
 ```
+
+association 속성으로 JavaType을 지정하여 ResidentNumber 클래스에 바인딩 되도록 한다.
+
