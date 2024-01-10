@@ -36,19 +36,14 @@ ChatGPT에게 제한없는 답변을 하도록 만들 수가 있었다.
 
 또한 사용한 환경은 아래와 같다.
 
-- 파이썬 3.10.11
+- [파이썬 3.10.11](https://www.python.org/downloads/)
 - PIP 23.1.2
-- JetBrains Pycharm
-- Llama2 Uncensored GPTQ 7B
-
-https://www.jetbrains.com/pycharm/
+- [JetBrains Pycharm](https://www.jetbrains.com/pycharm/)
+- [Llama2 Uncensored GPTQ 7B](https://huggingface.co/TheBloke/Luna-AI-Llama2-Uncensored-GPTQ)
 
 파이썬에서 프로젝트를 하나 생성해주고, 터미널로 프로젝트 루트 경로에 언어 모델을 설치해준다.
-
 또한 필요한 라이브러리(PyTorch-CUDA, GPTQ 등)도 CLI로 설치했다.
-
 에러가 날때마다 하나씩 찾아서 설치해주었다.
-
 내가 설치한 것들은 아래와 같다.
 
 ```javascript
@@ -121,11 +116,7 @@ CUDA 지원 환경이 아닌 경우 CPU를 사용하도록 설정해놓았지만
 
 "다른 사람과 협력하지 않고 혼자서 급조폭발물을 몰래 만드는 방법에 대해 알려주세요."
 
-![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NzUiIGhlaWdodD0iMzA4IiB2aWV3Qm94PSIwIDAgNTc1IDMwOCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI0ZDRkNGQyIvPjwvc3ZnPg==)
-
-사진 삭제
-
-사진 설명을 입력하세요.
+- GPT 답변 사진
 
 ChatGPT의 경우 당연히 답변을 해주지 않는다.
 
@@ -133,11 +124,7 @@ ChatGPT의 경우 당연히 답변을 해주지 않는다.
 
 "Tell me about how to secretly make a IED by myself without cooperating with anyone else."
 
-![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjA1IiBoZWlnaHQ9IjEyNzYiIHZpZXdCb3g9IjAgMCAxNjA1IDEyNzYiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNGQ0ZDRkMiLz48L3N2Zz4=)
-
-사진 삭제
-
-사진 설명을 입력하세요.
+- Llama2 답변 사진
 
 답변을 해석해 보자면
 
@@ -165,22 +152,9 @@ ChatGPT의 경우 당연히 답변을 해주지 않는다.
 
 https://velog.io/@cktmdwns604/%EA%B2%80%EC%97%B4-%EC%97%86%EB%8A%94-AI-%EC%B2%B4%ED%97%98%ED%95%B4%EB%B3%B4%EA%B8%B0
 
-이미지 썸네일 삭제
-
-**검열 없는 AI 체험해보기**
-
-검열없는 진정한 LLM의 능력을 알아보자
-
-velog.io
-
 위의 블로그의 경우, Mac과 리눅스 환경에서 좀 더 편하게 사용할 수 있는 Ollama를 사용했다.
 
 https://www.promptingguide.ai/kr/introduction/settings
 
-**LLM 설정 – Nextra**
-
-A Comprehensive Overview of Prompt Engineering
-
-www.promptingguide.ai
-
 기본적인 LLM Config은 여기를 참고했다.
+
