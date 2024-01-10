@@ -25,7 +25,7 @@
 </form>
 ```
 
-이 Form 안에서 하나의 Employee에 대한 데이터를 입력하고,
+이 Form 안에서 하나의 `Employee`에 대한 데이터를 입력하고,
 
 ```javascript
 const form = document.querySelector('form');  
@@ -33,3 +33,40 @@ const formData = new FormData(form);
   
 common.callFetch('/employee/employeeRegister.do', formData)
 ```
+
+이 formData를 POST로 전송하고
+
+```java
+@PostMapping("/employeeRegister.do")  
+@ResponseBody  
+public ResponseEntity<?> employeeRegister(@Valid @ModelAttribute Employee employee, BindingResult bindingResult) {  
+    if (bindingResult.hasErrors()) {  
+        return new ErrorResponse(bindingResult).build();  
+    }  
+  
+    employeeService.employeeRegister(employee);  
+    ...
+}
+```
+
+하나의 `Employee` 객체로 받는다고 하자.
+`@Valid` 어노테이션을 통해 유효성 검증을 진행한다.
+
+```java
+@Data  
+public class Employee {  
+    private Integer personId;  
+  
+    @NotBlank(message = "소속명은 필수 입력 사항입니다.")  
+    private String affiliation;  
+  
+    @NotBlank(message = "이름은 필수 입력 사항입니다.")  
+    private String name;  
+    
+    @ValidResidentNo(message = "잘못된 형식의 주민번호입니다.")  
+    private ResidentNumber residentNo = new ResidentNumber();
+    
+    ...
+}
+```
+
