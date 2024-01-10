@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uncensored LLM.md",
+                "file": "JAVA/Spring Security 6 설정.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uncensored LLM.md",
+                "file": "JAVA/Spring Security 6 설정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uncensored LLM.md",
+                "file": "JAVA/Spring Security 6 설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uncensored LLM.md"
+                "file": "JAVA/Spring Security 6 설정.md"
               }
             }
           }
@@ -169,7 +169,10 @@
   },
   "active": "9531423f38231d2c",
   "lastOpenFiles": [
-    "README.md",
-    "Uncensored LLM.md"
+    "LLM/Uncensored LLM.md",
+    "JAVA/Spring Security 6 설정.md",
+    "JAVA",
+    "LLM",
+    "README.md"
   ]
 }
