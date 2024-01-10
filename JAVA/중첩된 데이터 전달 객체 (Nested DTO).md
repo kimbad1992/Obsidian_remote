@@ -6,6 +6,8 @@
 
 나는 조금 다른 방법을 쓰고 싶다.
 
+### HTML
+
 ```html
 <form th:action="@{/employee/register}" method="post">
 
@@ -36,6 +38,8 @@ common.callFetch('/employee/employeeRegister.do', formData)
 
 이 formData를 POST로 전송하고
 
+### Controller
+
 ```java
 @PostMapping("/employeeRegister.do")  
 @ResponseBody  
@@ -51,6 +55,8 @@ public ResponseEntity<?> employeeRegister(@Valid @ModelAttribute Employee employ
 
 하나의 `Employee` 객체로 받는다고 하자.
 `@Valid` 어노테이션을 통해 유효성 검증을 진행한다.
+
+### DTO
 
 ```java
 @Data  
@@ -70,6 +76,8 @@ public class Employee {
     ...
 }
 ```
+
+### Nested DTO
 
 ```java
 @Data
@@ -93,4 +101,50 @@ public class ResidentNumber {
 위의 경우와 같이 화면 -> 서버로 전달 될 때는 frontNumber와 rearNumber가 분리되어
 각 필드의 Setter로 대입이 된다.
 하지만 Getter의 경우 앞자리 + 하이픈 + 뒷자리의 형태로
-"000000-000000"
+"000000-0000000"과 같은 하나의 문자열로 값을 리턴한다.
+
+### Validation
+
+```java
+@Documented  
+@Constraint(validatedBy = ResidentNumberValidator.class)  
+@Target({ElementType.METHOD, ElementType.FIELD})  
+@Retention(RetentionPolicy.RUNTIME)  
+public @interface ValidResidentNo {  
+    String message() default "잘못된 주민등록번호입니다.";  
+    Class<?>[] groups() default {};  
+    Class<? extends Payload>[] payload() default {};  
+}
+```
+커스텀 Validation을 진행하기 위한 별도의 어노테이션을 생성하고,
+
+```java
+public class ResidentNumberValidator implements ConstraintValidator<ValidResidentNo, ResidentNumber> {  
+  
+    @Override  
+    public boolean isValid(ResidentNumber residentNo, 
+					ConstraintValidatorContext context) {  
+        if (residentNo == null) {  
+            return false;  
+        }  
+  
+        if (!residentNo.getResidentNo().matches("\\d{6}-\\d{7}")) { // 길이 검사  
+            return false;  
+        }  
+  
+        return true;  
+    }  
+}
+```
+
+```sql
+INSERT INTO PERSON_INFO (AFFILIATION, NAME, RESIDENT_NUMBER)  
+VALUES (#{affiliation}, #{name}, #{residentNo.residentNo})  
+ON CONFLICT (RESIDENT_NUMBER) DO UPDATE  
+SET AFFILIATION = EXCLUDED.AFFILIATION,  
+NAME = EXCLUDED.NAME  
+RETURNING PERSON_ID
+```
+Mybatis 쿼리에서도 위와 같이 작성하면 `residentNo` 객체 안의 residentNo Getter를 호출하게 되므로 위와 같은 "000000-0000000" 형태의 문자열로 대입되어 INSERT 된다.
+
+
