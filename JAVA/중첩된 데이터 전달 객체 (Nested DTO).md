@@ -11,7 +11,7 @@
 ```html
 <form th:action="@{/employee/register}" method="post">
 
-...
+... 기타 Employee 객체에 대한 입력들
 
 <div class="form-group">  
     <label>주민번호<sup class="text-danger">*</sup></label>  
@@ -27,6 +27,7 @@
 </form>
 ```
 
+한 명의 Employee에 대해 정보를 입력 후 등록시킨다고 생각해보자.
 이 Form 안에서 하나의 `Employee`에 대한 데이터를 입력하고,
 
 ```javascript
@@ -36,7 +37,7 @@ const formData = new FormData(form);
 common.callFetch('/employee/employeeRegister.do', formData)
 ```
 
-이 formData를 POST로 전송하고
+이 formData를 POST로 전송하게 된다.
 
 ### Controller
 
@@ -53,7 +54,7 @@ public ResponseEntity<?> employeeRegister(@Valid @ModelAttribute Employee employ
 }
 ```
 
-하나의 `Employee` 객체로 받는다고 하자.
+그리고 그 formData를 하나의 `Employee` 객체로 받는다고 하자.
 `@Valid` 어노테이션을 통해 유효성 검증을 진행한다.
 
 ### DTO
@@ -76,6 +77,8 @@ public class Employee {
     ...
 }
 ```
+`ResidentNumber`라는 별도로 생성한 클래스와, 별도 생성한 클래스에 대해
+이 클래스의 유효성 검증을 진행하기 위한 커스텀 어노테이션도 생성했다.
 
 ### Nested DTO
 
@@ -127,15 +130,17 @@ public class ResidentNumberValidator implements ConstraintValidator<ValidResiden
         if (residentNo == null) {  
             return false;  
         }  
-  
         if (!residentNo.getResidentNo().matches("\\d{6}-\\d{7}")) { // 길이 검사  
             return false;  
-        }  
-  
+        } 
+		// 이외의 검증 로직...
         return true;  
     }  
 }
 ```
+위와 같이 해당 어노테이션을 가진 필드의 Validation 로직을 작성하면
+`@Valid`를 통해 
+
 
 ```sql
 INSERT INTO PERSON_INFO (AFFILIATION, NAME, RESIDENT_NUMBER)  
