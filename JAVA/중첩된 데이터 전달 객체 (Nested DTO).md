@@ -64,9 +64,13 @@ public class Employee {
     private String name;  
     
     @ValidResidentNo(message = "잘못된 형식의 주민번호입니다.")  
-    private ResidentNumber residentNo = new ResidentNumber();
+    private ResidentNumber residentNo = new ResidentNumber(); 
+    // NullValueInNestedPathException 방지용으로 객체를 new로 선언해줌
     
     ...
 }
 ```
 
+```java
+
+```
