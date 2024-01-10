@@ -72,5 +72,25 @@ public class Employee {
 ```
 
 ```java
-
+@Data
+public class ResidentNumber {  
+    private String frontNumber;  
+    private String rearNumber;  
+  
+    public ResidentNumber(String residentNo) {  
+        String[] parts = residentNo.split("-");  
+        this.frontNumber = parts[0];  
+        this.rearNumber = parts[1];  
+    }  
+  
+    public String getResidentNo() {  
+        return frontNumber + '-' + rearNumber;  
+    }  
+}
 ```
+
+`ResidentNo`는 내가 별도로 만든 주민등록번호 Class로,
+위의 경우와 같이 화면 -> 서버로 전달 될 때는 frontNumber와 rearNumber가 분리되어
+각 필드의 Setter로 대입이 된다.
+하지만 Getter의 경우 앞자리 + 하이픈 + 뒷자리의 형태로
+"000000-000000"
