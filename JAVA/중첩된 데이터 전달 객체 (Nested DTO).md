@@ -104,7 +104,8 @@ public class ResidentNumber {
 위의 경우와 같이 화면 -> 서버로 전달 될 때는 frontNumber와 rearNumber가 분리되어
 각 필드의 Setter로 대입이 된다.
 하지만 Getter의 경우 앞자리 + 하이픈 + 뒷자리의 형태로
-"000000-0000000"과 같은 하나의 문자열로 값을 리턴한다.
+"000000-0000000"과 같은 하나의 문자열로 값을 리턴 한다.
+`getResidentNo`를 따로 만든 이유는 아래의 SQL Insert등에서 하나의 문자열로 사용하고 싶어서다.
 
 ### Validation
 
@@ -139,8 +140,9 @@ public class ResidentNumberValidator implements ConstraintValidator<ValidResiden
 }
 ```
 위와 같이 해당 어노테이션을 가진 필드의 Validation 로직을 작성하면
-`@Valid`를 통해 
+`@Valid`를 통해 내가 만든 클래스에 대한 유효성 검증을 이 Validator에서 진행하게 된다.
 
+### SQL
 
 ```sql
 INSERT INTO PERSON_INFO (AFFILIATION, NAME, RESIDENT_NUMBER)  
@@ -150,6 +152,23 @@ SET AFFILIATION = EXCLUDED.AFFILIATION,
 NAME = EXCLUDED.NAME  
 RETURNING PERSON_ID
 ```
-Mybatis 쿼리에서도 위와 같이 작성하면 `residentNo` 객체 안의 residentNo Getter를 호출하게 되므로 위와 같은 "000000-0000000" 형태의 문자열로 대입되어 INSERT 된다.
+Mybatis 쿼리에서도 위와 같이 작성하면 `residentNo` 객체 안의 residentNo Getter를 호출하게 되므로 위와 같은 "000000-0000000" 형태의 문자열로 대입되어 INSERT 된다. (컬럼을 하나만 사용한다.)
 
+만약 특정 SELECT절을 `Employee` 객체 하나로 리턴하고 싶은 경우 ResultMap을 사용한다.
 
+```sql
+<resultMap id="employeeResultMap" type="employee">  
+    <!-- Simple Fields -->  
+    <result property="personId" column="PERSON_ID"/>  
+    <result property="affiliation" column="AFFILIATION"/>  
+    <result property="name" column="NAME"/>  
+  
+    <!-- Nested Fields -->  
+    <association property="residentNo" javaType="residentNumber">  
+        <result property="frontNumber" column="RESIDENT_FRONT_NUMBER"/>  
+        <result property="rearNumber" column="RESIDENT_REAR_NUMBER"/>  
+    </association>
+    
+    ...
+</resultMap>
+```

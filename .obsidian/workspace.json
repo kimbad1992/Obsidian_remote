@@ -45,18 +45,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA/CustomErrorController.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3fbcea03b2b4144",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
                 "mode": "source",
                 "source": false
@@ -64,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -191,11 +179,13 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "f3fbcea03b2b4144",
+  "active": "267e5140502cb94f",
   "lastOpenFiles": [
-    "Pasted image 20240110171530.png",
+    "Image/Pasted image 20240110171530.png",
     "JAVA/CustomErrorController.md",
     "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
+    "무제 파일.md",
+    "Image",
     "JAVA/Spring Security 6 설정.md",
     "LLM/Uncensored LLM.md",
     "JAVA",
