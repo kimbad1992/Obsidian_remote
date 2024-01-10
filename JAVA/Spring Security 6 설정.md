@@ -95,8 +95,9 @@ public class SecurityConfig {
 ```
 
 기존 Spring Security 설정 방식인 `WebSecurityConfigurerAdapter`을 상속받아 config하는 방식에서
-
+`SecurityFilterChain`의 Bean을 메서드 체이닝 방식으로 구현하는 형태로 변경되었다.
 
 
 세션 기반, 토큰 기반 로그인의 구현 용도로 프로퍼티 상의 Login Mode값을 받아서 분기되게 해놓았으나 실제로는 그렇게 쓸 일이 없어보임 (토큰이면 토큰, 세션이면 세션 하나로 통일)
 
+[Spring Security 6.2 Docs](https://docs.spring.io/spring-security/reference/index.html)
