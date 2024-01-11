@@ -68,7 +68,8 @@ public class SecurityConfig {
         return http.build();  
     }  
   
-    // CORS 설정 Bean    @Bean  
+    // CORS 설정 Bean    
+    @Bean  
     public CorsConfigurationSource corsConfigurationSource() {  
         CorsConfiguration configuration = new CorsConfiguration();  
         configuration.setAllowedOrigins(Arrays.asList("*"));  
