@@ -248,7 +248,10 @@ public class BatchLoggingListener implements JobListener {
 }
 ```
 
+@After, @Before등 각 AOP 기능에 대해 1:1 매칭이 되지는 않지만, 
+각 메서드 구현을 통해 Quartz Job 실행 전/후 등으로 특정 로직 실행이 가능하다.
 
+## Scheduler Initializer
 
 ```java
 @Component  
@@ -277,7 +280,8 @@ public class SchedulerInitializer {
             }  
   
             // 스케쥴러에 JobListener 추가  
-            scheduler.getListenerManager().addJobListener(batchLoggingListener);  
+            scheduler.getListenerManager().addJobListener(batchLoggingListener);
+            
         } catch (Exception e) {  
             log.error("Scheduler init Error : {}", e.getMessage(), e);  
             throw new RuntimeException("Scheduler init Error");  
@@ -288,7 +292,7 @@ public class SchedulerInitializer {
         // 크론 표현식 유효성 확인  
         boolean isCronExpressionValid = CronExpression.isValidExpression(batchVO.getBatchSchedule());  
         if (!isCronExpressionValid) {  
-            log.info("[{}] : Cron Expression format is invalid", batchVO.getBatchClass());  
+            log.error("[{}] : Cron Expression format is invalid", batchVO.getBatchClass());  
             return;  
         }  
   
@@ -321,7 +325,7 @@ public class SchedulerInitializer {
             } else {  
                 // Batch 활성화 상태 확인  
                 if (batchVO.getBatchStatus() == null || !batchVO.getBatchStatus().equals("Y")) {  
-                    log.info("Batch job [{}] is not active", batchVO.getBatchId());  
+                    log.debug("Batch job [{}] is not active", batchVO.getBatchId());  
                     return;  
                 }  
   
