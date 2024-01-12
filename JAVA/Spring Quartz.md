@@ -364,3 +364,6 @@ Scheduler Initializer가 각 의존성 주입이 완료된 후 DB에 등록된 �
 Scheduler Initializer는 Bean으로 생성되어 다른 Bean에서도 사용할 수 있다.
 예를 들어, **배치 스케쥴을 변경하는 서비스**쪽에서 DB의 Batch Schedule 정보를 변경 한 후
 `addOrUpdateJob()` 호출을 통해 스케쥴러의 상태를 변경할 수 있다.
+
+
+AOP의 Proxy 작동 방식은 [여기](https://mangkyu.tistory.com/175)를 참조.
