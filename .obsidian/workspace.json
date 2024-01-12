@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmers/무제 파일.md",
+                "file": "Algorithm/Search.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programmers/무제 파일.md",
+                "file": "Algorithm/Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programmers/무제 파일.md",
+                "file": "Algorithm/Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programmers/무제 파일.md"
+                "file": "Algorithm/Search.md"
               }
             }
           }
@@ -181,8 +181,14 @@
   },
   "active": "267e5140502cb94f",
   "lastOpenFiles": [
+    "Algorithm/Sort.md",
+    "Algorithm/Search.md",
+    "Algorithm/Doom's Day.md",
+    "Algorithm/Greedy.md",
+    "Programmers/Level 1 - 추억점수.md",
+    "Algorithm",
+    "Programmers/Level 1 - 기사단원의 무기.md",
     "Programmers/Level 2 - 기능개발.md",
-    "Programmers/무제 파일.md",
     "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
     "Programmers/Level 2 - 오픈 채팅방.md",
     "Programmers/Level 1 - 성격 유형 검사하기.md",
@@ -202,12 +208,7 @@
     "Programmers/Level 1 - 키패드 누르기.md",
     "Programmers/Level 1 - 수포자 모의고사.md",
     "Programmers/Level 1 - 달리기 등수.md",
-    "JAVA/Maven 빌드 환경에서 특정 jar 라이브러리를 추가하기.md",
     "Programmers",
-    "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
-    "JAVA/CustomErrorController.md",
-    "JAVA/Spring Security 6 설정.md",
-    "JAVA/Spring Quartz.md",
     "Javascript",
     "Image/Pasted image 20240110171530.png",
     "Image",
