@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmers/Level 1 - 추억점수.md",
+                "file": "DB/DB 유의사항.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programmers/Level 1 - 추억점수.md",
+                "file": "DB/DB 유의사항.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programmers/Level 1 - 추억점수.md",
+                "file": "DB/DB 유의사항.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programmers/Level 1 - 추억점수.md"
+                "file": "DB/DB 유의사항.md"
               }
             }
           }
@@ -181,6 +181,11 @@
   },
   "active": "9531423f38231d2c",
   "lastOpenFiles": [
+    "JAVA/Rest Service Factory.md",
+    "DB/DB 유의사항.md",
+    "DB",
+    "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
+    "Programmers/Level 1 - 추억점수.md",
     "JAVA/Spring Security 6 설정.md",
     "14, 4], [19, 6], [6, 16], [18, 7], [7, 11.md",
     "Programmers/Level 1 - 2016년.md",
@@ -199,14 +204,10 @@
     "Programmers/Level 1 - 완주하지 못한 선수.md",
     "Programmers/Level 1 - 체육복.md",
     "Programmers/Level 1 - 최소 직사각형.md",
-    "Programmers/Level 1 - 추억점수.md",
     "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
     "Programmers/Level 1 - 키패드 누르기.md",
     "Programmers/Level 1 - 폰켓몬.md",
     "Programmers/Level 2 - 기능개발.md",
-    "Algorithm/Search.md",
-    "Algorithm/Doom's Day.md",
-    "Algorithm/Greedy.md",
     "Algorithm",
     "Programmers",
     "Javascript",
