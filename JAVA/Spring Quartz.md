@@ -118,7 +118,7 @@ public class SomeJob extends QuartzJobBean {
 ```
 
 Job 인터페이스의 구현체인 추상 클래스 QuartzJobBean을 확장해서 사용한다
-추상 메서드 `excuteInternal()`를 구현하게 되는데 한가지 문제 발생.
+추상 메서드 `excuteInternal()`를 구현하게 된다.
 
 ### Batch Logging
 
@@ -165,23 +165,11 @@ public class BatchLoggingAspect {
   
   
             // @AfterReturning 수행  
-            if ("Y".equals(isLogEnabled)) {  
-                batchLog.setEndDateTime(CommonUtil.getLogDateTime(currentDateTimeInMillis()));  
-                batchLog.setBatchStatus(COMPLETED);  
-                batchLog.setBatchResult(SUCCESS);  
-  
-                batchLogService.upsertBatchLog(batchLog);  
-            }  
+            ...
             // @AfterReturning 종료  
         } catch (Exception e) {  
             // @AfterThrowing 수행  
-            if ("Y".equals(isLogEnabled)) {  
-                batchLog.setEndDateTime(CommonUtil.getLogDateTime(currentDateTimeInMillis()));  
-                batchLog.setBatchStatus(COMPLETED);  
-                batchLog.setBatchResult(FAIL);  
-  
-                batchLogService.upsertBatchLog(batchLog);  
-            }  
+			...
             throw e;  
             // @AfterThrowing 종료  
         } finally {  
@@ -191,17 +179,11 @@ public class BatchLoggingAspect {
         }  
   
     }  
-  
-    private Date currentDateTimeInMillis() {  
-        long startTime = System.currentTimeMillis();  
-        Calendar c = Calendar.getInstance();  
-        c.setTimeInMillis(startTime);  
-  
-        return c.getTime();  
-    }  
 }
 ```
 
+기존에 Batch Logging을 하고 해당 Batch의 실행 상태를 DB에 저장하는 Aspect다.
+Spring 레거시 프로젝트를 
 
 
 
