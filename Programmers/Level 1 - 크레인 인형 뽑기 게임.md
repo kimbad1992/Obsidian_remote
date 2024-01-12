@@ -186,5 +186,5 @@ class Solution {
 `Stack`이라는 클래스를 사용해서 푼 사람이 있었다.
 좀 찾아보니 `Stack`과 `Queue`라는 비슷하지만 약간 다른 형태의 자료구조가 있었고,
 `Stack`은 `LIFO(Last In, First Out)`구조를 가지고 있는데, 딱 여기서 bucket에 쓰면 될 것 같은 형태다.
-![](https://velog.velcdn.com/images/kimbad1992/post/f01091ba-e846-4ad0-b180-eefb320cea29/image.png)
-자료구조에 대해서도 공부를 좀 해야겠다 싶다.
+
+Stack - [[no-file]]
