@@ -11,6 +11,7 @@ Maven Repository에 등록되어있지 않은 특정 라이브러리 jar파일�
 
 ```xml
 ...
+
 <dependency>  
     <groupId>com.extern(임의의 그룹ID 지정)</groupId>
     <artifactId>someLibrary</artifactId>  
@@ -18,5 +19,9 @@ Maven Repository에 등록되어있지 않은 특정 라이브러리 jar파일�
     <scope>system</scope>  
     <systemPath>${project.basedir}/extern_lib/someLibrary.jar</systemPath>  
 </dependency>
+
+...
 ```
-를
+와 같이 pom.xml에 등록시켜서 Maven이 사용할 수 있게 설정해준다.
+
+또는 Maven 로컬 Repository 구성 후 각 라이브러리를 직접 폴더를 생성하여 추가하는 방법도 있다고 한다. (그래도 pom.xml에 경로 명과 동일하게 그룹,아티팩트명 맞춰서 추가해줘야 함)
