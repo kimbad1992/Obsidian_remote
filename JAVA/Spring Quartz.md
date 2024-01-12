@@ -88,7 +88,47 @@ public class QuartzConfig {
 }
 ```
 
-각 Batch 단위 서비스가 될 Job 클래스에서 
+각 Batch 단위 서비스가 될 Job 클래스에서 Autowired를 사용하지 못하는 문제로
+JobFactory를 추가로 설정해야함
+
+Misfire 정책이나 JobStore 사용 여부에 따라서 쿼츠에서 사용할 DB 릴레이션이 필요한 경우가 있음
+
+## Job 클래스
+
+```java
+@Service  
+@Slf4j  
+public class LogElapsAvgJob extends QuartzJobBean {  
+  
+    @Value("${app.batch.nodeId}")  
+    private String nodeId;  
+  
+    @Autowired  
+    private SystemService systemService;  
+  
+    @Autowired  
+    private LogElapsAvgService logElapsAvgService;  
+  
+    @Override  
+    @Transactional    @BatchJob("logElapsAvgJob")  
+    public void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {  
+       try {  
+          String batchNodeId = systemService.getSysNode("logElapsAvgJob");  
+          if(batchNodeId != null && batchNodeId.equals(nodeId)) {  
+  
+             logElapsAvgService.batchLogElapsAvg();  
+  
+             systemService.setLastScheduleDate("logElapsAvgJob", nodeId);  
+          }  
+  
+       } catch (Exception ex) {  
+          log.error("logElapsAvgJob batch error-->" + ex.getMessage());  
+          throw new BatchScheduleException(ex);  
+       }  
+    }  
+}
+```
+
 
 ```java
 @Component  
