@@ -98,36 +98,111 @@ Misfire 정책이나 JobStore 사용 여부에 따라서 쿼츠에서 사용할 
 ```java
 @Service  
 @Slf4j  
-public class LogElapsAvgJob extends QuartzJobBean {  
-  
-    @Value("${app.batch.nodeId}")  
-    private String nodeId;  
-  
+public class SomeJob extends QuartzJobBean {  
+
     @Autowired  
-    private SystemService systemService;  
-  
-    @Autowired  
-    private LogElapsAvgService logElapsAvgService;  
+    private SomeService someService;  
   
     @Override  
-    @Transactional    @BatchJob("logElapsAvgJob")  
+    @Transactional    
+    // @BatchJob("someService") // Aspect의 감지용 어노테이션
     public void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {  
        try {  
-          String batchNodeId = systemService.getSysNode("logElapsAvgJob");  
-          if(batchNodeId != null && batchNodeId.equals(nodeId)) {  
-  
-             logElapsAvgService.batchLogElapsAvg();  
-  
-             systemService.setLastScheduleDate("logElapsAvgJob", nodeId);  
-          }  
-  
-       } catch (Exception ex) {  
-          log.error("logElapsAvgJob batch error-->" + ex.getMessage());  
-          throw new BatchScheduleException(ex);  
+		  someService.someMethod(...);
+       } catch (Exception e) {  
+          log.error("some Error...");  
+          throw new YourException(e);  
        }  
     }  
 }
 ```
+
+Job 인터페이스의 구현체인 추상 클래스 QuartzJobBean을 확장해서 사용한다
+추상 메서드 `excuteInternal()`를 구현하게 되는데 한가지 문제 발생.
+
+### Batch Logging
+
+```java
+@Component  
+@Aspect  
+@Slf4j  
+public class BatchLoggingAspect {  
+  
+    @Autowired  
+    BatchScheduleService batchScheduleService;  
+  
+    @Autowired  
+    BatchLogService batchLogService;
+  
+    private final static String INPROCESS = "INPROCESS";  
+    private final static String COMPLETED = "COMPLETED";  
+    private final static String SUCCESS = "SUCCESS";  
+    private final static String FAIL = "FAIL";  
+  
+    @Pointcut("execution(* com.nsc.rest.batch.*Job.*(..)) && @annotation(batchJob)")  
+    private void batchJobMethods(BatchJob batchJob) {  
+    }  
+    @Around(value = "batchJobMethods(batchJob)", argNames = "joinPoint,batchJob")  
+    public Object aroundBatchJob(ProceedingJoinPoint joinPoint, BatchJob batchJob) throws Throwable {  
+        // 로깅 로직  
+        doLogging(joinPoint, batchJob);  
+        return joinPoint.proceed();  
+    }  
+  
+    public void doLogging(ProceedingJoinPoint joinPoint, BatchJob batchJob) throws Throwable {  
+  
+        ...
+  
+        try {  
+            // @Before 수행  
+	        ...
+            // @Before 종료  
+  
+  
+            // Target 메서드 호출  
+            Object result = joinPoint.proceed();  
+            // Target 메서드 종료  
+  
+  
+            // @AfterReturning 수행  
+            if ("Y".equals(isLogEnabled)) {  
+                batchLog.setEndDateTime(CommonUtil.getLogDateTime(currentDateTimeInMillis()));  
+                batchLog.setBatchStatus(COMPLETED);  
+                batchLog.setBatchResult(SUCCESS);  
+  
+                batchLogService.upsertBatchLog(batchLog);  
+            }  
+            // @AfterReturning 종료  
+        } catch (Exception e) {  
+            // @AfterThrowing 수행  
+            if ("Y".equals(isLogEnabled)) {  
+                batchLog.setEndDateTime(CommonUtil.getLogDateTime(currentDateTimeInMillis()));  
+                batchLog.setBatchStatus(COMPLETED);  
+                batchLog.setBatchResult(FAIL);  
+  
+                batchLogService.upsertBatchLog(batchLog);  
+            }  
+            throw e;  
+            // @AfterThrowing 종료  
+        } finally {  
+            // @After 수행  
+            ...
+            // @After 종료  
+        }  
+  
+    }  
+  
+    private Date currentDateTimeInMillis() {  
+        long startTime = System.currentTimeMillis();  
+        Calendar c = Calendar.getInstance();  
+        c.setTimeInMillis(startTime);  
+  
+        return c.getTime();  
+    }  
+}
+```
+
+
 
 
 ```java
