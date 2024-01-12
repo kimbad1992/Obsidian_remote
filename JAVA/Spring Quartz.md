@@ -183,7 +183,70 @@ public class BatchLoggingAspect {
 ```
 
 기존에 Batch Logging을 하고 해당 Batch의 실행 상태를 DB에 저장하는 Aspect다.
-Spring 레거시 프로젝트를 
+Spring 레거시 프로젝트를 Spring Boot로 업팩토링을 진행하며 한가지 문제가 발생했다.
+Spring AOP는 Proxy 형태로 동작하게 되는데, `QuartzJobBean`의 `executeInternal()`메서드는
+protected 접근자여서 Proxy가 동작할 수 없다는 것.
+그래서 변경한 형태가 Job Listner다.
+
+### Job Listener
+
+```java
+@Slf4j
+public class BatchLoggingListener implements JobListener {
+
+    @Autowired
+    private BatchScheduleService batchScheduleService;
+
+    @Autowired
+    private BatchLogService batchLogService;
+
+    private final static String INPROCESS = "INPROCESS";
+    private final static String COMPLETED = "COMPLETED";
+    private final static String SUCCESS = "SUCCESS";
+    private final static String FAIL = "FAIL";
+    
+    @Override
+    public String getName() {
+        return "BatchLoggingListener";
+    }
+
+    @Override
+    public void jobToBeExecuted(JobExecutionContext context) {
+
+        // @Before 수행
+        ...
+        // @Before 종료
+    }
+
+    @Override
+    public void jobExecutionVetoed(JobExecutionContext jobExecutionContext) {
+        // 실행 거절된 경우
+    }
+
+    @Override
+    public void jobWasExecuted(JobExecutionContext context, JobExecutionException e) {
+        ...
+        
+        // 예외가 발생한 경우 (@AfterThrowing)
+        if (e != null && 기타 조건...) {
+            ...
+        }
+
+        // 예외가 발생하지 않은 경우 (@AfterReturning)
+        if (e == null && 기타 조건...) {
+            ...
+        }
+
+        // @After 수행
+        ...
+        // @After 종료
+    }
+
+    private String getMethodName(JobExecutionContext context) {
+        return context.getJobDetail().getKey().getName();
+    }
+}
+```
 
 
 
