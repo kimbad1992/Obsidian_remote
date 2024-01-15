@@ -43,12 +43,8 @@
             "id": "e3659f05bbbc56e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JAVA/Spring Quartz.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -130,7 +126,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JAVA/Spring Quartz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +142,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JAVA/Spring Quartz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,9 +163,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JAVA/Spring Quartz.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -194,6 +186,8 @@
   },
   "active": "e3659f05bbbc56e7",
   "lastOpenFiles": [
+    "JAVA/Spring Quartz.md",
+    "무제 파일.canvas",
     "JAVA/Rest Service Factory.md",
     "Programmers/Level 1 - 실패율.md",
     "Algorithm/Sort.md",
@@ -219,8 +213,6 @@
     "Programmers/Level 1 - 수포자 모의고사.md",
     "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
     "Programmers/Level 1 - 신고 결과 받기.md",
-    "Programmers/Level 1 - 신규 아이디 추천.md",
-    "Programmers/Level 1 - 완주하지 못한 선수.md",
     "Algorithm",
     "Programmers",
     "Javascript",
