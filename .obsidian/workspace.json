@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
+                "file": "Others/결정론과 자유의지.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
+                "file": "Others/결정론과 자유의지.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
+                "file": "Others/결정론과 자유의지.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md"
+                "file": "Others/결정론과 자유의지.md"
               }
             }
           }
@@ -194,6 +194,7 @@
   },
   "active": "9531423f38231d2c",
   "lastOpenFiles": [
+    "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
     "Others/결정론과 자유의지.md",
     "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
     "Others",
@@ -222,7 +223,6 @@
     "Programmers/Level 1 - 성격 유형 검사하기.md",
     "Programmers/Level 1 - 수포자 모의고사.md",
     "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
-    "Programmers/Level 1 - 신고 결과 받기.md",
     "Algorithm",
     "Programmers",
     "Javascript",
