@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Others/결정론과 자유의지.md",
+                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Others/결정론과 자유의지.md",
+                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Others/결정론과 자유의지.md",
+                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Others/결정론과 자유의지.md"
+                "file": "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md"
               }
             }
           }
@@ -192,10 +192,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "d2d9268c8fca27f5",
+  "active": "9531423f38231d2c",
   "lastOpenFiles": [
-    "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
     "Others/결정론과 자유의지.md",
+    "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
     "Others",
     "JAVA/Spring Quartz.md",
     "무제 파일.canvas",
