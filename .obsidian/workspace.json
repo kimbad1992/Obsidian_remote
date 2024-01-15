@@ -53,7 +53,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "결자해지.md",
+                "file": "결정론과 자유의지.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "결자해지.md",
+                "file": "결정론과 자유의지.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "결자해지.md",
+                "file": "결정론과 자유의지.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "결자해지.md"
+                "file": "결정론과 자유의지.md"
               }
             }
           }
@@ -202,7 +202,7 @@
   },
   "active": "b8b23f0f24bb4735",
   "lastOpenFiles": [
-    "결자해지.md",
+    "결정론과 자유의지.md",
     "Others",
     "JAVA/Spring Quartz.md",
     "무제 파일.canvas",
