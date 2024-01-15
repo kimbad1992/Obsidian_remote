@@ -33,18 +33,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
+                "file": "Others/결정론과 자유의지.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "e3659f05bbbc56e7",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           },
           {
@@ -53,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "결정론과 자유의지.md",
+                "file": "Others/결정론과 자유의지.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -138,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "결정론과 자유의지.md",
+                "file": "Others/결정론과 자유의지.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "결정론과 자유의지.md",
+                "file": "Others/결정론과 자유의지.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "결정론과 자유의지.md"
+                "file": "Others/결정론과 자유의지.md"
               }
             }
           }
@@ -200,9 +192,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b8b23f0f24bb4735",
+  "active": "d2d9268c8fca27f5",
   "lastOpenFiles": [
-    "결정론과 자유의지.md",
+    "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
+    "Others/결정론과 자유의지.md",
     "Others",
     "JAVA/Spring Quartz.md",
     "무제 파일.canvas",
@@ -213,7 +206,6 @@
     "Algorithm/Greedy.md",
     "Algorithm/Doom's Day.md",
     "DB/DB 유의사항.md",
-    "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
     "Programmers/Level 1 - 최소 직사각형.md",
     "Programmers/Level 1 - 추억점수.md",
     "14, 4], [19, 6], [6, 16], [18, 7], [7, 11.md",
