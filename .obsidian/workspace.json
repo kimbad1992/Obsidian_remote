@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "무제 파일.md",
+                "file": "iChain 회의 240116.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "무제 파일.md",
+                "file": "iChain 회의 240116.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제 파일.md",
+                "file": "iChain 회의 240116.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,8 +182,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제 파일.md"
+                "file": "iChain 회의 240116.md"
               }
+            }
+          },
+          {
+            "id": "abdfd7ff46db04be",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ],
@@ -208,7 +216,7 @@
   "active": "1962d2c6d1f010ff",
   "lastOpenFiles": [
     "README.md",
-    "무제 파일.md",
+    "iChain 회의 240116.md",
     "JAVA/Spring Security 6 설정.md",
     "JAVA/CustomErrorController.md",
     "Programmers/Level 1 - 2016년.md",
