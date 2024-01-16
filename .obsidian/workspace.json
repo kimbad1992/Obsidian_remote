@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA/Spring Security 6 설정.md",
+                "file": "Programmers/Level 1 - 비밀지도.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JAVA/Spring Security 6 설정.md",
+                "file": "Programmers/Level 1 - 비밀지도.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JAVA/Spring Security 6 설정.md",
+                "file": "Programmers/Level 1 - 비밀지도.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JAVA/Spring Security 6 설정.md"
+                "file": "Programmers/Level 1 - 비밀지도.md"
               }
             }
           }
@@ -189,11 +189,17 @@
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "command-palette:명령어 팔레트 열기": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "9531423f38231d2c",
   "lastOpenFiles": [
+    "Programmers/Level 1 - 기사단원의 무기.md",
+    "Programmers/Level 1 - 다트 게임.md",
+    "Programmers/Level 1 - 2016년.md",
+    "JAVA/CustomErrorController.md",
+    "JAVA/Spring Security 6 설정.md",
     "Others/결정론과 자유의지.md",
     "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
     "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
@@ -212,17 +218,12 @@
     "14, 4], [19, 6], [6, 16], [18, 7], [7, 11.md",
     "DB",
     "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
-    "JAVA/Spring Security 6 설정.md",
-    "Programmers/Level 1 - 2016년.md",
     "Programmers/Level 1 - 같은 숫자는 싫어.md",
-    "Programmers/Level 1 - 기사단원의 무기.md",
-    "Programmers/Level 1 - 다트 게임.md",
     "Programmers/Level 1 - 달리기 등수.md",
     "Programmers/Level 1 - 로또의 최고 순위와 최저 순위.md",
     "Programmers/Level 1 - 비밀지도.md",
     "Programmers/Level 1 - 성격 유형 검사하기.md",
     "Programmers/Level 1 - 수포자 모의고사.md",
-    "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
     "Algorithm",
     "Programmers",
     "Javascript",
