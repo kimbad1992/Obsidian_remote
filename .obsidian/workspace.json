@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md",
+                "file": "DB/DB 유의사항.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md",
+                "file": "DB/DB 유의사항.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md",
+                "file": "DB/DB 유의사항.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md"
+                "file": "DB/DB 유의사항.md"
               }
             }
           },
@@ -215,6 +215,7 @@
   },
   "active": "1962d2c6d1f010ff",
   "lastOpenFiles": [
+    "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md",
     "iChain 회의 240116.md",
     "README.md",
     "JAVA/Spring Security 6 설정.md",
@@ -243,7 +244,6 @@
     "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
     "Programmers/Level 1 - 같은 숫자는 싫어.md",
     "Programmers/Level 1 - 달리기 등수.md",
-    "Programmers/Level 1 - 로또의 최고 순위와 최저 순위.md",
     "Algorithm",
     "Programmers",
     "Javascript",
