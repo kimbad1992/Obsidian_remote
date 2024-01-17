@@ -26,4 +26,19 @@ Maven Repository에 등록되어있지 않은 특정 라이브러리 jar파일�
 
 또는 Maven 로컬 Repository 구성 후 각 라이브러리를 직접 폴더를 생성하여 추가하는 방법도 있다고 한다. (그래도 pom.xml에 경로 명과 동일하게 그룹,아티팩트명 맞춰서 추가해줘야 함)
 
-__해당 방법은 jar 패키징 시 해당 라이브러리를 추가하지 않음__
+~~해당 방법은 jar 패키징 시 해당 라이브러리를 추가하지 않음~~
+
+해당 jar들을 패키징 시 포함시키려면
+
+```xml
+<plugins>  
+    <plugin>  
+       <groupId>org.springframework.boot</groupId>  
+       <artifactId>spring-boot-maven-plugin</artifactId>  
+       <configuration>  
+	       ...
+          <includeSystemScope>true</includeSystemScope> // 이 부분을 추가시켜준다.
+       </configuration>  
+    </plugin>  
+</plugins>
+```
