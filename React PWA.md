@@ -1,5 +1,50 @@
 
-프로젝트 생성
+## 프로젝트 생성
 
 - `npx create-react-app pwa-react --template cra-template-pwa`
 
+## CSS
+
+전역을 관장하는 CSS같은 경우 `index.css`
+이외에는 `App.css`등 사용함
+
+```js
+import ReactDOM from 'react-dom/client';  
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import './index.css';
+...
+```
+부트스트랩 아래로 커스텀 CSS를 import해야 커스텀 CSS를 인식함
+
+```sh
+npm install react-bootstrap
+```
+리액트 전용 부트스트랩을 사용할 수 있음
+
+
+## 컴포넌트
+
+```jsx
+import React from 'react';  
+import { Link } from 'react-router-dom';  
+import { Navbar, Nav } from 'react-bootstrap';  
+  
+function NavigationBar() {  
+    return (  
+        <Navbar bg="light" expand="lg" sticky="top" className="topbar">  
+            <Navbar.Brand as={Link} to="/" style={{ fontSize: '1.2em' }}>MyApp</Navbar.Brand>  
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />  
+            <Navbar.Collapse id="basic-navbar-nav">  
+                <Nav className="ml-auto">  
+                    <Nav.Link as={Link} to="/" style={{ fontSize: '1.1em' }}>홈</Nav.Link>  
+                    <Nav.Link as={Link} to="/notice" style={{ fontSize: '1.1em' }}>공지사항</Nav.Link>
+                </Nav>  
+            </Navbar.Collapse>  
+        </Navbar>  
+    );  
+}  
+  
+export default NavigationBar;
+```
+
+리액트 Router를 통해 라우팅 처리를 할 수 있고
