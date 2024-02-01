@@ -47,4 +47,18 @@ function NavigationBar() {
 export default NavigationBar;
 ```
 
-리액트 Router를 통해 라우팅 처리를 할 수 있고
+리액트 Router를 통해 라우팅 처리를 할 수 있다.
+
+
+## 변수
+
+```js
+import React, { useState, useEffect } from 'react';  
+import { Carousel } from 'react-bootstrap';  
+  
+function EventCarousel() {  
+    const [events, setEvents] = useState([]);
+    ...
+```
+
+상태 변화 감지가 필요한 변수에 대해서 위와 같이 사용이 가능하다.
