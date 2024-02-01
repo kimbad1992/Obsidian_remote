@@ -62,3 +62,12 @@ function EventCarousel() {
 ```
 
 상태 변화 감지가 필요한 변수에 대해서 위와 같이 사용이 가능하다.
+
+## 추가
+
+```sh
+npm install react-items-carousel # 리액트 캐러셀
+npm install axios # 비동기 fetch 호출용 라이브러
+npm install react-router-dom # 라우터
+
+```
