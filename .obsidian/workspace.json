@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/무제 파일.md",
+                "file": "DB/락 조회용 쿼리.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/무제 파일.md",
+                "file": "DB/락 조회용 쿼리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/무제 파일.md",
+                "file": "DB/락 조회용 쿼리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/무제 파일.md"
+                "file": "DB/락 조회용 쿼리.md"
               }
             }
           },
@@ -228,7 +228,7 @@
   "active": "1e93c9f978a2fefe",
   "lastOpenFiles": [
     "DB/DB 유의사항.md",
-    "DB/무제 파일.md",
+    "DB/락 조회용 쿼리.md",
     "React PWA.md",
     "iChain 회의 240116.md",
     "Programmers/Level 1 - 2016년.md",
