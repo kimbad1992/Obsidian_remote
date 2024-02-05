@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/Sort.md",
+                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Sort.md",
+                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Sort.md",
+                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Sort.md"
+                "file": "DB/스키마 Search Path 지정 (Postgresql).md"
               }
             }
           },
@@ -227,10 +227,11 @@
   },
   "active": "c6b8b059ef2ec67b",
   "lastOpenFiles": [
+    "Algorithm/Sort.md",
+    "DB/스키마 Search Path 지정 (Postgresql).md",
     "Algorithm/Search.md",
     "Algorithm/Greedy.md",
     "Algorithm/Doom's Day.md",
-    "Algorithm/Sort.md",
     "DB/락 조회용 쿼리.md",
     "DB/DB 유의사항.md",
     "Image/Pasted image 20240110171530.png",

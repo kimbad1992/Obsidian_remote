@@ -1,0 +1,5 @@
+
+SHOW SEARCH_PATH;
+
+ALTER USER ichain4 SET SEARCH_PATH = ichain5,public;
+
