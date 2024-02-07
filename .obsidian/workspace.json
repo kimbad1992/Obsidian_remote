@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
+                "file": "변경사항 리뷰.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
+                "file": "변경사항 리뷰.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/스키마 Search Path 지정 (Postgresql).md",
+                "file": "변경사항 리뷰.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/스키마 Search Path 지정 (Postgresql).md"
+                "file": "변경사항 리뷰.md"
               }
             }
           },
@@ -227,8 +227,9 @@
   },
   "active": "c6b8b059ef2ec67b",
   "lastOpenFiles": [
-    "Algorithm/Sort.md",
+    "React PWA.md",
     "DB/스키마 Search Path 지정 (Postgresql).md",
+    "Algorithm/Sort.md",
     "Algorithm/Search.md",
     "Algorithm/Greedy.md",
     "Algorithm/Doom's Day.md",
@@ -241,9 +242,8 @@
     "JAVA/Spring Quartz.md",
     "LLM/Uncensored LLM.md",
     "Others/결정론과 자유의지.md",
-    "무제 파일.md",
+    "변경사항 리뷰.md",
     "iChain 회의 240116.md",
-    "React PWA.md",
     "Programmers/Level 1 - 2016년.md",
     "README.md",
     "Programmers/Level 1 - 다트 게임.md",
