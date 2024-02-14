@@ -69,7 +69,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.md",
+                "file": "React/React.md",
                 "mode": "source",
                 "source": false
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.md",
+                "file": "React/React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.md",
+                "file": "React/React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React.md"
+                "file": "React/React.md"
               }
             }
           },
@@ -237,10 +237,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dc5332b90d79ead6",
+  "active": "d2d9268c8fca27f5",
   "lastOpenFiles": [
     "변경사항 리뷰.md",
-    "React.md",
+    "React/React.md",
     "React",
     "React PWA.md",
     "DB/스키마 Search Path 지정 (Postgresql).md",

@@ -31,3 +31,14 @@ class는 JSX에서는 `className` 이라는 속성으로 작성
 
 해당 컴포넌트에서 사용할 CSS는
 `import './App.css';`와 같이 작성한다
+
+### 변수 삽입
+
+```jsx
+let blog = '블로그임';
+<div className="black-nav">  
+    <h4>{ blog }</h4>  
+</div>
+```
+중괄호를 이용해 변수 삽입이 가능하다.
+id, className 등 속성에도 사용이 가능하다.
