@@ -98,3 +98,19 @@ let [a, c] = [1, 2];
 일반 Javascript 변수의 경우 값이 변경되면 HTML에 반영이 되지 않는다.
 State의 경우 값이 변경되면 HTML이 다시 재렌더링된다(HTML에 반영이 된다.)
 
+### 이벤트 핸들러
+
+```jsx
+let [like, setLike] = useState(0)
+...
+<h4>{title[0]} <span onClick={}>🫰</span> {like} </h4>
+```
+
+onClick 핸들러 내부에는 함수만 넣어야한다.
+
+`<span onClick={console.log('하이')}>🫰</span>`
+는 동작하지 않는다
+
+`<span onClick={() => {console.log('하이')}}>🫰</span>`
+는 동작한다.
+
