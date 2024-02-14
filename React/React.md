@@ -114,3 +114,13 @@ onClick 핸들러 내부에는 함수만 넣어야한다.
 `<span onClick={() => {console.log('하이')}}>🫰</span>`
 는 동작한다.
 
+
+### State 변경
+
+```jsx
+let [like, setLike] = useState(0)
+...
+<h4>{title[0]} <span onClick={()=>{ setLike(like+1) }}>🫰</span> {like} </h4>
+```
+state 변경 함수를 통해 변경될 값을 전달한다.
+
