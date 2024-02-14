@@ -64,6 +64,18 @@
             }
           },
           {
+            "id": "dc5332b90d79ead6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "b8b23f0f24bb4735",
             "type": "leaf",
             "state": {
@@ -88,7 +100,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -154,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "변경사항 리뷰.md",
+                "file": "React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "변경사항 리뷰.md",
+                "file": "React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "변경사항 리뷰.md"
+                "file": "React.md"
               }
             }
           },
@@ -225,8 +237,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c6b8b059ef2ec67b",
+  "active": "dc5332b90d79ead6",
   "lastOpenFiles": [
+    "변경사항 리뷰.md",
+    "React.md",
+    "React",
     "React PWA.md",
     "DB/스키마 Search Path 지정 (Postgresql).md",
     "Algorithm/Sort.md",
@@ -242,7 +257,6 @@
     "JAVA/Spring Quartz.md",
     "LLM/Uncensored LLM.md",
     "Others/결정론과 자유의지.md",
-    "변경사항 리뷰.md",
     "iChain 회의 240116.md",
     "Programmers/Level 1 - 2016년.md",
     "README.md",
@@ -255,7 +269,6 @@
     "무제 파일.canvas",
     "JAVA/Rest Service Factory.md",
     "Programmers/Level 1 - 실패율.md",
-    "Programmers/Level 1 - 최소 직사각형.md",
     "DB",
     "Algorithm",
     "Programmers",
