@@ -92,3 +92,9 @@ let c = num[1];
 // Destructuring 문법의 경우
 let [a, c] = [1, 2];
 ```
+
+### State를 사용하는 이유
+
+일반 Javascript 변수의 경우 값이 변경되면 HTML에 반영이 되지 않는다.
+State의 경우 값이 변경되면 HTML이 다시 재렌더링된다(HTML에 반영이 된다.)
+
