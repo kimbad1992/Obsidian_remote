@@ -70,4 +70,7 @@ return (
 
 ## State
 
-`import `
+`import {useState} from 'react'`
+`useState(보관할 자료)`
+`let [작명, 작명]`
+
