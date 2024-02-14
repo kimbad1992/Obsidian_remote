@@ -154,3 +154,7 @@ state도 변경된다.
 ```
 
 __위와 같이 state가 array/object인 경우 shallow copy를 만들어서 수정해야함__
+
+반복적인 HTML을 축약할 때
+큰 페이지인 경우
+자주 변경되는 경우
