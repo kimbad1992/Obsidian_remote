@@ -124,3 +124,26 @@ let [like, setLike] = useState(0)
 ```
 state 변경 함수를 통해 변경될 값을 전달한다.
 
+```jsx
+let [title, setTitle] = useState(['남자코트 추천', '강남 우동 맛집', '파이썬 독학']);
+...
+<button onClick={() => {
+	let copy = title;
+	copy[0] = '여자코트 추천';
+	setTitle(copy);
+}}
+
+ // 위의 경우 동작하지 않음
+ // state 변경 함수의 경우 기존 state가 신규 state와 동일하면 변경이 이루어지지 않는다
+
+<button onClick={() => {
+	let copy = [...title];
+	copy[0] = '여자코트 추천';
+	setTitle(copy);
+}}
+
+// 위의 경우 변경됨
+```
+
+### Spread 연산자
+
