@@ -133,8 +133,12 @@ let [title, setTitle] = useState(['남자코트 추천', '강남 우동 맛집',
 	setTitle(copy);
 }}
 
- // 위의 경우 동작하지 않음
- // state 변경 함수의 경우 기존 state가 신규 state와 동일하면 변경이 이루어지지 않는다
+ /*
+ 위의 경우 동작하지 않음
+ state 변경 함수의 경우 기존 state가 신규 state와 동일하면 변경이 이루어지지 않는다
+ 데이터는 변경되었지만 title Array의 포인터가 가리키는 주소가 변하지 않았기 때문에
+ setState에서 동일한 state로 인식하기 때문
+ */
 
 <button onClick={() => {
 	let copy = [...title];
@@ -142,8 +146,11 @@ let [title, setTitle] = useState(['남자코트 추천', '강남 우동 맛집',
 	setTitle(copy);
 }}
 
-// 위의 경우 변경됨
+/*
+위의 경우는 변경됨
+Spread 연산자를 통해 값을 새로운 Array로 생성하기 때문에 주소값이 변경되고
+state도 변경된다.
+*/
 ```
 
-### Spread 연산자
-
+__위와 같이 state가 array/object인 경우 shallow copy를 만들어서 수정해야함__
