@@ -52,3 +52,19 @@ id, className 등 속성에도 사용이 가능하다.
 CSS는 `font-size` 라는 형태로 작성하면 JS 문법 상 마이너스로 인식하기 때문에
 카멜케이스(`fontSize`)로 작성한다.
 
+
+## State
+
+각 컴포넌트의 `return()` 내에는 병렬로 2개 이상의 태그를 기입하지 않는다
+
+```jsx
+return (
+	<div>
+		...
+	</div>
+	// 아래에 동일한 Depth의 div 태그가 병렬로 존재하면 에러
+	<div>
+	</div>
+)
+```
+
