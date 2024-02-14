@@ -71,6 +71,24 @@ return (
 ## State
 
 `import {useState} from 'react'`
-`useState(보관할 자료)`
-`let [작명, 작명]`
+Javascript의 Destructuring 문법으로 state 선언
+`let [작명1, 작명2] = useState(보관할 자료)`
 
+```jsx
+<h4>{작명1}</h4>
+
+// 작명1은 state에 보관된 자료를 출력함
+// 작명2는 state의 변경을 도와주는 함수
+```
+
+### Destructuring 문법
+
+```js
+let num = [1, 2];
+// 위의 있던 값을 변수로 빼고 싶을 경우
+let a = num[0];
+let c = num[1];
+
+// Destructuring 문법의 경우
+let [a, c] = [1, 2];
+```
