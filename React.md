@@ -18,3 +18,16 @@ __Node.js__ 설치를 필요로 함(Node Package Manager는 딸려옴)
 
 ## JSX 문법
 
+Javascript로 HTML 문서를 만들 수 있게 함
+
+### className
+
+class는 JSX에서는 `className` 이라는 속성으로 작성
+```jsx
+<div className="black-nav">  
+    <h4>블로그임</h4>  
+</div>
+```
+
+해당 컴포넌트에서 사용할 CSS는
+`import './App.css';`와 같이 작성한다
