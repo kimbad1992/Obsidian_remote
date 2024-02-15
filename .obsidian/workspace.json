@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/DB 생성 명령어.md",
+                "file": "React/React 빌드 후 스프링 프로젝트 결합.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/DB 생성 명령어.md",
+                "file": "React/React 빌드 후 스프링 프로젝트 결합.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/DB 생성 명령어.md",
+                "file": "React/React 빌드 후 스프링 프로젝트 결합.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/DB 생성 명령어.md"
+                "file": "React/React 빌드 후 스프링 프로젝트 결합.md"
               }
             }
           },
@@ -157,13 +157,14 @@
   },
   "active": "64e6c080dca33fa5",
   "lastOpenFiles": [
-    "DB/락 조회용 쿼리.md",
+    "React/React 기초.md",
+    "React/React 빌드 후 스프링 프로젝트 결합.md",
     "DB/DB 생성 명령어.md",
+    "DB/락 조회용 쿼리.md",
     "2024-02-15.md",
     "무제 파일.canvas",
     "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
     "변경사항 리뷰.md",
-    "React/React 기초.md",
     "React",
     "React PWA.md",
     "README.md",
@@ -184,7 +185,6 @@
     "Programmers/Level 1 - 성격 유형 검사하기.md",
     "Programmers/Level 1 - 비밀지도.md",
     "Programmers/Level 1 - 로또의 최고 순위와 최저 순위.md",
-    "Programmers/Level 1 - 달리기 등수.md",
     "Programmers",
     "Others",
     "LLM",
