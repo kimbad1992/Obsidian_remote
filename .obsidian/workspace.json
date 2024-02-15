@@ -1,120 +1,39 @@
 {
   "main": {
-    "id": "2d2e6e14b0b0c2af",
+    "id": "9a7228d84bfb43aa",
     "type": "split",
     "children": [
       {
-        "id": "0cebbd2cfdd705bb",
+        "id": "df655d7c663be8c5",
         "type": "tabs",
         "children": [
           {
-            "id": "ce1267083a73e03e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "3501689d1e744411",
+            "id": "64e6c080dca33fa5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9531423f38231d2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1e93c9f978a2fefe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/락 조회용 쿼리.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c6b8b059ef2ec67b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "변경사항 리뷰.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dc5332b90d79ead6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React/React 기초.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b8b23f0f24bb4735",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Others/결정론과 자유의지.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa68ab36459ceada",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm/Search.md",
+                "file": "DB/DB 생성 명령어.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "db9357189c2d1b7f",
+    "id": "29d473276955b8a9",
     "type": "split",
     "children": [
       {
-        "id": "f5768be59d44a6b5",
+        "id": "cb94d45581073d6f",
         "type": "tabs",
         "children": [
           {
-            "id": "d2d9268c8fca27f5",
+            "id": "dfb0a52cc238e504",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -124,7 +43,7 @@
             }
           },
           {
-            "id": "a9fe8c072e80654d",
+            "id": "23fa07db2e21c8fe",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -139,7 +58,7 @@
             }
           },
           {
-            "id": "992e6b99f837411b",
+            "id": "cd38f5458bf35fe4",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -153,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "a9d66e003463f1db",
+    "id": "7d610cdf3def696d",
     "type": "split",
     "children": [
       {
-        "id": "1fdbc1e411fb06bb",
+        "id": "2eb1feaf395a910d",
         "type": "tabs",
         "children": [
           {
-            "id": "6c634a5dd411e2ef",
+            "id": "39c302567e4f574f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/React 기초.md",
+                "file": "DB/DB 생성 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,40 +97,40 @@
             }
           },
           {
-            "id": "9f94ed7e6b4a8ad4",
+            "id": "5141ac9d5e71e538",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/React 기초.md",
+                "file": "DB/DB 생성 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "13a11e03fd4ee2a9",
+            "id": "23e7f0a33b197e69",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
           {
-            "id": "139e0fa6d9f3d9df",
+            "id": "6ec7ba713c638236",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/React 기초.md"
+                "file": "DB/DB 생성 명령어.md"
               }
             }
           },
           {
-            "id": "abdfd7ff46db04be",
+            "id": "55cf4c6fcaa677a0",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
@@ -219,62 +138,63 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:퀵 스위처 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "dc5332b90d79ead6",
+  "active": "64e6c080dca33fa5",
   "lastOpenFiles": [
+    "DB/락 조회용 쿼리.md",
+    "DB/DB 생성 명령어.md",
+    "2024-02-15.md",
+    "무제 파일.canvas",
+    "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
     "변경사항 리뷰.md",
     "React/React 기초.md",
     "React",
     "React PWA.md",
-    "DB/스키마 Search Path 지정 (Postgresql).md",
-    "Algorithm/Sort.md",
-    "Algorithm/Search.md",
-    "Algorithm/Greedy.md",
-    "Algorithm/Doom's Day.md",
-    "DB/락 조회용 쿼리.md",
-    "DB/DB 유의사항.md",
-    "Image/Pasted image 20240110171530.png",
-    "JAVA/Maven 빌드 환경에서 외부 jar 라이브러리를 추가하기.md",
-    "JAVA/CustomErrorController.md",
-    "JAVA/Spring Security 6 설정.md",
-    "JAVA/Spring Quartz.md",
-    "LLM/Uncensored LLM.md",
-    "Others/결정론과 자유의지.md",
-    "iChain 회의 240116.md",
-    "Programmers/Level 1 - 2016년.md",
     "README.md",
-    "Programmers/Level 1 - 다트 게임.md",
-    "Programmers/Level 1 - 기사단원의 무기.md",
-    "Programmers/Level 1 - 비밀지도.md",
-    "JAVA/중첩된 데이터 전달 객체 (Nested DTO).md",
+    "Programmers/Level 2 - 오픈 채팅방.md",
+    "Programmers/Level 2 - 기능개발.md",
+    "Programmers/Level 1 - 폰켓몬.md",
+    "Programmers/Level 1 - 키패드 누르기.md",
     "Programmers/Level 1 - 크레인 인형 뽑기 게임.md",
-    "Others",
-    "무제 파일.canvas",
-    "JAVA/Rest Service Factory.md",
+    "Programmers/Level 1 - 추억점수.md",
+    "Programmers/Level 1 - 최소 직사각형.md",
+    "Programmers/Level 1 - 체육복.md",
+    "Programmers/Level 1 - 완주하지 못한 선수.md",
     "Programmers/Level 1 - 실패율.md",
+    "Programmers/Level 1 - 신규 아이디 추천.md",
+    "Programmers/Level 1 - 신고 결과 받기.md",
+    "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
+    "Programmers/Level 1 - 수포자 모의고사.md",
+    "Programmers/Level 1 - 성격 유형 검사하기.md",
+    "Programmers/Level 1 - 비밀지도.md",
+    "Programmers/Level 1 - 로또의 최고 순위와 최저 순위.md",
+    "Programmers/Level 1 - 달리기 등수.md",
+    "Programmers",
+    "Others",
+    "LLM",
+    "Javascript",
+    "JAVA",
+    "Image/Pasted image 20240110171530.png",
+    "Image",
     "DB",
     "Algorithm",
-    "Programmers",
-    "Javascript",
-    "Image",
-    "JAVA",
-    "LLM"
+    "새 폴더/React",
+    "새 폴더/Image/Pasted image 20240110171530.png"
   ]
 }
