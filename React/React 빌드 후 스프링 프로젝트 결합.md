@@ -18,3 +18,6 @@ Windows 환경의 경우, 다음과 같이 `package.json`에 스크립트를 추
 
 
 리눅스나 macOS에서는 `rsync` 또는 `cp` 명령어를 사용
+
+## 정적 리소스
+
