@@ -32,13 +32,19 @@ function render() {
 `store.subscribe(render);`
 store의 state값이 바뀔 때마다 render 함수가 호출되며 재렌더링을 할 수 있다.
 
+
 ```js
 <form onsubmit="
 	...
-	store.dispatch({type:'create', payload:{title:title, desc:desc:}})
+	store.dispatch({type:'create', payload:{title:title, desc:desc:}});
+">
 ```
 
+1. dispatch에 action 객체를 전달({type:'create', payload:{title:title, desc:desc:}})
+2. reducer를 호출해 state의 값을 변경
+reducer는 변경될 state의 값을 받아 기존 state를 변경하고, 그 값을 리턴하는 가공자가 된다
 
+4. subscribe를 통해 render함수
 
 ## Redux Toolkit
 
