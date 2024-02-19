@@ -138,7 +138,7 @@ document.querySelector('#component_green').style.backgroundColor='red'
 ## Redux Toolkit
 
 ```jsx
-const 체중 = 100;
+var 체중 = 100;
 
 function reducer(state=체중, action) {
 	if (action.type === '증가') {
@@ -167,3 +167,6 @@ redux는 그 부분의 어려움을 해결해줌
 3. **createSlice**
     
     - `createSlice` 함수는 액션 생성자와 리듀서를 한 번에 생성할 수 있게 해 줍니다. `name`, `initialState`, `reducers` 객체를 인자로 받아, 해당 리듀서와 액션 생성자들을 포함하는 슬라이스 객체를 반환합니다. 이는 Redux 로직을 더욱 간결하게 만들어 줍니다.
+
+
+기본적인 Redux 설정, 미들웨어 설치, 반복되는 코드, JS 내 불변성 유지가 어려운 점을 해결해준다.
