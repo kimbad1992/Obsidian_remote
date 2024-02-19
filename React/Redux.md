@@ -57,6 +57,11 @@ reducer는 변경될 state의 값을 받아 기존 state를 변경하고, 그 �
 store가 subscriber에게 state가 변경된것을 rendering 하도록 전달
 
 __Redux Debugging Tool__을 쓸 수 있다(Time Traveling 가능)
+
+
+## Redux 예시
+
+
 ## Redux Toolkit
 
 ```jsx
