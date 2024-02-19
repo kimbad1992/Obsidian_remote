@@ -173,23 +173,11 @@ state도 변경된다.
 */
 ```
 
-__위와 같이 state가 array/object인 경우 shallow copy를 만들어서 수정해야함__
+__위와 같이 state가 array/object인 경우 불변성을 유지하기 위해 shallow copy를 만들어서 수정해야함__
 
 반복적인 HTML을 축약할 때
 큰 페이지인 경우
 자주 변경되는 경우
-
-```jsx
-const [count, setCount] = useState(0);
-
-// 올바른 방법: 함수형 업데이트 사용
-setCount(prevCount => prevCount + 1);
-
-// 잘못된 방법: 직접 수정
-// count += 1;
-// setCount(count); // 이렇게 하면 예상치 못한 동작이 발생할 수 있음
-```
-
 
 ## 빌드 후 Build 파일 이동시키는 스크립트 추가
 
@@ -216,3 +204,6 @@ Windows 환경의 경우, 다음과 같이 `package.json`에 스크립트를 추
 `React프로젝트루트/public/` 아래에 위치 시킨다.
 동적으로 경로가 변하는 환경에서도 %PUBLIC_URL%/파일명으로
 상대경로 지정이 가능하다.
+
+보통은 `%PUBLIC_URL%` 대신 `process.env.PUBLIC_URL`을 사용하는 것이 더 안전
+`<img src={process.env.PUBLIC_URL + '/logo.png'} alt="로고" />`

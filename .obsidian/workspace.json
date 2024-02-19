@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React 기초.md",
+                "file": "React/Redux.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/React 기초.md",
+                "file": "React/Redux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/React 기초.md",
+                "file": "React/Redux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/React 기초.md"
+                "file": "React/Redux.md"
               }
             }
           },
@@ -157,9 +157,9 @@
   },
   "active": "64e6c080dca33fa5",
   "lastOpenFiles": [
+    "React/React 기초.md",
     "변경사항 리뷰.md",
     "React/Redux.md",
-    "React/React 기초.md",
     "React/React 빌드 후 스프링 프로젝트 결합.md",
     "2024-02-15.md",
     "무제 파일.canvas",
