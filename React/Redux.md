@@ -2,8 +2,6 @@
 ## 좋아요
 
 ```jsx
-import { createStore } from 'redux';
-
 const 체중 = 100;
 
 function reducer(state=체중, action) {
