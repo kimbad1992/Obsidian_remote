@@ -55,7 +55,7 @@ reducer는 변경될 state의 값을 받아 기존 state를 변경하고, 그 �
 특정 부품을 onClick하면 store에 state가 변경되었음을 전달
 store가 subscriber에게 state가 변경된것을 rendering 하도록 전달
 
-__Red
+__Redux Debugging Tool__을 쓸 수 있다(Time Traveling 가능)
 ## Redux Toolkit
 
 ```jsx

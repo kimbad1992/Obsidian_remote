@@ -19,6 +19,18 @@ __Node.js__ 설치를 필요로 함(Node Package Manager는 딸려옴)
 ## JSX 문법
 
 Javascript로 HTML 문서를 만들 수 있게 함
+JSX에서의 주석은 `{/* 주석 내용 */}`의 형태로 작성
+일반적인 JavaScript 주석인 `//` 또는 `/* */` 형태로는 작성할 수 없다
+
+jsx
+
+```jsx
+<div>
+    {/* 이 부분은 주석입니다 */}
+    <h1>Hello, World!</h1>
+</div>
+```
+
 
 ### className
 
@@ -114,6 +126,14 @@ onClick 핸들러 내부에는 함수만 넣어야한다.
 `<span onClick={() => {console.log('하이')}}>🫰</span>`
 는 동작한다.
 
+```jsx
+function handleClick() {
+    console.log('클릭되었습니다.');
+}
+
+<button onClick={handleClick}>클릭</button>
+```
+혹은 함수를 선언하고, 해당 함수의 참조를 전달하는 방법도 있다.
 
 ### State 변경
 
@@ -158,6 +178,17 @@ __위와 같이 state가 array/object인 경우 shallow copy를 만들어서 수
 반복적인 HTML을 축약할 때
 큰 페이지인 경우
 자주 변경되는 경우
+
+```jsx
+const [count, setCount] = useState(0);
+
+// 올바른 방법: 함수형 업데이트 사용
+setCount(prevCount => prevCount + 1);
+
+// 잘못된 방법: 직접 수정
+// count += 1;
+// setCount(count); // 이렇게 하면 예상치 못한 동작이 발생할 수 있음
+```
 
 
 ## 빌드 후 Build 파일 이동시키는 스크립트 추가
