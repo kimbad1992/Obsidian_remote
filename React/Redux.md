@@ -61,6 +61,86 @@ __Redux Debugging Tool__을 쓸 수 있다(Time Traveling 가능)
 
 ## Redux 예시
 
+```js
+...
+<div id="red"></div>
+<div id="blue"></div>
+<div id="green"></div>
+...
+<script>
+function reducer(state, action) {
+	if (state === undefined) {
+		// 초기화 단계인 경우. 아래의 return이 초기값이 됨
+		return {color:'yellow'}
+	}
+	
+	let newState;
+	if (action.type === 'CHANGE_COLOR') {
+		// state.color = 'red';
+		// 위와 같은 형태는 State의 Immutable을 깨뜨림
+		// 아래와 같이 state의 복사본을 만들어 return 한
+		newState = Object.assign({}, state, {color: action.color});
+	}
+
+	return newState;
+}
+
+const store = Redux.createStore(reducer);
+//-------------------------------------------------------------------
+function red() {
+	let state = store.getState();
+	document.querySelector('#red').innerHTML = `
+		<div class="container" id="component_red" style="background-color:${state.color}">
+			<h1>red</h1>
+			<input type="button" value="fire" onclick="
+				store.dispatch({type:'CHANGE_COLOR', color:'red'})
+			">
+		</div>
+	`;
+}
+
+store.subscribe(red);
+red();
+
+function blue() {
+	let state = store.getState();
+	document.querySelector('#blue').innerHTML = `
+		<div class="container" id="component_blue" style="background-color:${state.color}">
+			<h1>blue</h1>
+			<input type="button" value="fire" onclick="
+				store.dispatch({type:'CHANGE_COLOR', color:'blue'})
+			">
+		</div>
+	`;
+}
+
+store.subscribe(blue);
+blue();
+
+...
+
+function red() {
+
+                document.querySelector('#red').innerHTML = `
+
+                    <div class="container" id="component_red">
+
+                        <h1>red</h1>
+
+                        <input type="button" value="fire" onclick="
+
+                            document.querySelector('#component_red').style.backgroundColor='red'
+document.querySelector('#component_green').style.backgroundColor='red'
+                        ">
+                    </div>
+                `;
+
+            }
+</script>
+```
+
+각 color 함수들의 독립성을 보장받을 수 있다. (Decoupling)
+
 
 ## Redux Toolkit
 
