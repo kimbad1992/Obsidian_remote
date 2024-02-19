@@ -43,7 +43,14 @@ store의 state값이 바뀔 때마다 render 함수가 호출되며 재렌더링
 1. dispatch에 action 객체를 전달({type:'create', payload:{title:title, desc:desc:}})
 2. reducer를 호출해 state의 값을 변경
 reducer는 변경될 state의 값을 받아 기존 state를 변경하고, 그 값을 리턴하는 가공자가 된다
-3. subscribe를 통해 render함수를 재호출하여 변경된 state를 렌더링한
+3. subscribe를 통해 render함수를 재호출하여 변경된 state를 렌더링
+
+
+## Redux 왜써요
+
+특정 부품을 onClick했을때 서로간에 영향을 주는 형태의 부품이 있다면
+갯수가 많아질수록 서로간의 종속성이 올라가기 때문에 부품이 아니게 됨
+
 
 ## Redux Toolkit
 
