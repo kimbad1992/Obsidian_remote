@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "45bb772447b54442",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,7 +166,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "64e6c080dca33fa5",
+  "active": "45bb772447b54442",
   "lastOpenFiles": [
     "React/Redux.md",
     "React/개인플젝 테스트.md",
