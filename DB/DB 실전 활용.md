@@ -113,6 +113,10 @@ ORDER BY order_by_expression
 - window frame between
 `BETWEEN <window frame bound> AND <window frame bound>`
 
+### LAG
+- `LAG (scalar_expression [, offset][, default])`
+- 지정된 파티션 (OVER 안의 PARTITION BY) 있는 현재 ROW (offset) 기준으로 N(기본 1)번째 앞에 있는 Row의 value_expression 값을 반환한다.
+
 ```sql
 WITH BASE AS (  
     SELECT BRAND_CD, DATEPART(MONTH, ORDER_DATE) AS ORDER_MONTH, SUM(AMOUNT) AS AMOUNT  
@@ -132,3 +136,24 @@ ORDER BY A.BRAND_CD, A.ORDER_MONTH
 ```
 1개의 기준 결과 내에서 집계 처리를 전부 할 수 있는 장점
 
+### 번호 지정 함수
+- 순서(OVER 안에 ORDER BY)가 지정된 파티션 (OVER 안에 PARTITION BY) 내에서 순위를 반환한다.
+
+```sql
+WITH BASE AS (
+  SELECT ORDER_NO, BRAND_CD, MARS_ID, AMOUNT
+	   , RANK() OVER(PARTITION BY BRAND_CD ORDER BY AMOUNT DESC) AS B_RANK
+	   , DENSE_RANK() OVER(PARTITION BY BRAND_CD ORDER BY AMOUNT DESC) AS B_DENSE_RANK
+	   , ROW_NUMBER() OVER(PARTITION BY BRAND_CD ORDER BY AMOUNT DESC) AS B_ROW_NUMBER
+	FROM TB_MYBB_PURCHASE
+   WHERE BRAND_CD IN ('07', '15')
+	 AND ORDER_DATE >= '2023-12-31'
+	 AND ORDER_DATE <  '2024-01-01'
+)
+SELECT ORDER_NO, BRAND_CD, MARS_ID, AMOUNT, B_RANK, B_DENSE_RANK, B_ROW_NUMBER
+  FROM BASE
+ WHERE B_ROW_NUMBER <= 5
+ ORDER BY BRAND_CD, B_ROW_NUMBER
+```
+
+### 집계 함수
