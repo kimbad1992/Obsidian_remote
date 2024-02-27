@@ -1,2 +1,8 @@
 SELECT * FROM TB_MYBB_INTG_MBR
 WHERE MBR_NAME = '강건우';
+
+
+1) INDEX
+
+1) B-Tree Index
+![[Pasted image 20240227134656.png]]
