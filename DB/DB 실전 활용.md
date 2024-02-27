@@ -87,3 +87,29 @@ OPTION (MAXRECURSION 0); -- MSSQL 재귀 최대 횟수 지정
 ## Window Function
 
 구조
+
+`ANALYTIC_function ([argument_list]) OVER_clause`
+
+- OVER_clause
+```
+OVER (
+	[<PARTITION BY clause>]
+	[<ORDER BY clause>]
+	[ROW or RANGE clause>]
+)
+```
+
+- PARTITION BY clause
+	`PARTITION BY value_expression, ... [n]`
+- ORDER BY clause
+```
+ORDER BY order_by_expression
+[COLLATE collation_name]
+[ASC | DESC]
+[, ...n]
+```
+- ROW or RANGE clause
+`{ROWS | RANGE} <window frame extent>`
+- window frame between
+`BETWEEN <window frame bound> AND <window frame bound>`
+
