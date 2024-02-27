@@ -1,4 +1,4 @@
-## Ⅰ. SQL 활용
+## 인덱스
 
   
 
@@ -33,3 +33,18 @@ DBCC SHOWCONTIG(테이블명, 인덱스명)
 -- 인덱스 리빌드
 ALTER INDEX [인덱스명] ON [테이블명] REBUILD;
 ```
+
+
+## Subquery
+
+1. 위치에 따라 사용되는 Subquery
+	1) SELECT 절
+		SELECT절의 행의 수만큼 Subquery를 수행하기 때문에 사용에 주의해야 한다.
+	2) FROM 절
+		FROM절에 사용하는 Subquery는 인라인 뷰(Inline View)라고 하며, View처럼 결과가 동적으로 생성된 임시적 테이블로서 자유롭게 참조가 가능하지만 Memory에 올라가 인덱스를 사용할 수 없다.
+	3) WHERE 절
+
+2. WITH 활용
+	1) Inline View
+	FROM절에 사용하는 Subquery(Inline View)와 동일하고, 사용하기 편하다.
+	호출 할때마다 WITH절 안에 있는 쿼리를 숳애한다. 

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/DB 인덱스.md",
+                "file": "DB/DB 실전 활용.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/DB 인덱스.md",
+                "file": "DB/DB 실전 활용.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/DB 인덱스.md",
+                "file": "DB/DB 실전 활용.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/DB 인덱스.md"
+                "file": "DB/DB 실전 활용.md"
               }
             }
           },
@@ -173,7 +173,7 @@
     "Pasted image 20240227140340.png",
     "Pasted image 20240227134656.png",
     "README.md",
-    "DB/DB 인덱스.md",
+    "DB/DB 실전 활용.md",
     "React/Redux.md",
     "React/개인플젝 테스트.md",
     "React/React 기초.md",
