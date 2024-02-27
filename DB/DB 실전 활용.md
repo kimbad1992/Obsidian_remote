@@ -69,3 +69,28 @@ SELECT MENU_ID, LV, MENU_NM, MENU_PATH
 
 2024년 2월 1일부터 2024년 12월 31일
 
+-- 공통 테이블 표현식(CTE) 선언
+
+WITH DateCTE AS (
+
+-- 초기값 설정
+
+SELECT CAST('2024-02-01' AS DATE) AS DateValue
+
+UNION ALL
+
+-- 재귀적 쿼리 정의
+
+SELECT DATEADD(day, 1, DateValue)
+
+FROM DateCTE
+
+WHERE DateValue < '2024-12-31'
+
+)
+
+-- 최종 결과 선택
+
+SELECT DateValue
+
+FROM DateCTE
