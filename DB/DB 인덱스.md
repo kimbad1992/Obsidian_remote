@@ -1,28 +1,37 @@
-SELECT * FROM TB_MYBB_INTG_MBR
-WHERE MBR_NAME = '강건우';
+## Ⅰ. SQL 활용
 
+  
+
+2. 실전 SQL 활용
 
 1) INDEX
 
-1) B-Tree Index
-![[Pasted image 20240227134656.png]]
+1. B-Tree 인덱스  
+    1) B-Tree 구조
 
-인덱스 컬럼 선정
-- 분포도가 좋은 컬럼은 단독으로 생성
-- 자주 조합되어 사용되는 경우는 결합 인덱스 생성
-- 가능한 수정이 빈번하지 않은 컬럼을 선정
-- 가능한 컬럼이 여러 인덱스에 포함되지 않도록 한다
-- FK 같이 다른 테이블과 연결된 컬럼을 선정하도록 한다
-- 결합 인덱스의 컬럼 순서 선정에 주의한다(사용 빈도, 정렬 유형 등..)
+![](https://lh7-us.googleusercontent.com/hoi4meVIALR2HIlzLXB_eb0oCJmwAhP3Ppp-f4I4hHvqFi9oYO6fnUQGUkpdI300_1K0xOw9OUXm-wUDclo2LzTaf_YQ9H7ju7N7_SyKpwCVGWYpxKvOTtn76-RgwuDTi4cOcnOrxv72Gg1jcguSZA=s2048)  
 
-인덱스 생성 시 고려사항
+     2) Index 구조  
+        - CREATE INDEX IDX_TB_MYBB_INTG_MBR_01 ON TB_MYBB_INTG_MBR (MBR_NAME ASC)
 
-- 인덱스를 위한 추가적인 저장 공간이 필요하다.
-- 지나치게 많은 인덱스 및 인덱스 컬럼을 생성하지 않도록 한다.
 
-인덱스가 사용되지 않는 경우
- - 인덱스 컬럼이 비교되기 전에 변형이 일어날 경우(형 변환)
- - 부정형으로 비교되는 경우
- - 해당 Table의 총 Record 건  수가 인덱스를 사용하지 않아도 되는 Count인 경우
- - 인덱스로 추출 대상이 된 Count가 너무 많을 때(일반적으로 15% 이상일 때)
- - 인덱스 컬럼의 잦은 삽입, 삭제, 갱신으로 조각화가 높았을 
+ 
+
+
+## 인덱스 상태 검사
+
+```sql
+-- Oracle
+SELECT OWNER, INDEX_NAME, TABLE_NAME
+FROM DBA_INDEXES 
+WHERE STATUS = 'UNUSABLE'
+
+-- 인덱스 리빌드
+ALTER INDEX [인덱스명] REBUILD;
+
+--- MSSQL
+DBCC SHOWCONTIG(테이블명, 인덱스명)
+
+-- 인덱스 리빌드
+ALTER INDEX [인덱스명] ON [테이블명] REBUILD;
+```
