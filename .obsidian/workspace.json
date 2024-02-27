@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "DB/DB 인덱스.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "DB/DB 인덱스.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "DB/DB 인덱스.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "DB/DB 인덱스.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "45bb772447b54442",
   "lastOpenFiles": [
+    "README.md",
+    "DB/DB 인덱스.md",
     "React/Redux.md",
     "React/개인플젝 테스트.md",
     "React/React 기초.md",
@@ -182,7 +184,6 @@
     "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
     "React",
     "React PWA.md",
-    "README.md",
     "Programmers/Level 2 - 오픈 채팅방.md",
     "Programmers/Level 2 - 기능개발.md",
     "Programmers/Level 1 - 폰켓몬.md",
@@ -197,7 +198,6 @@
     "Programmers/Level 1 - 신고 결과 받기.md",
     "Programmers/Level 1 - 수학적 지식을 요하는 문제들.md",
     "Programmers/Level 1 - 수포자 모의고사.md",
-    "Programmers/Level 1 - 성격 유형 검사하기.md",
     "Programmers",
     "Others",
     "LLM",
