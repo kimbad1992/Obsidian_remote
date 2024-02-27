@@ -46,5 +46,23 @@ ALTER INDEX [인덱스명] ON [테이블명] REBUILD;
 
 2. WITH 활용
 	1) Inline View
-	FROM절에 사용하는 Subquery(Inline View)와 동일하고, 사용하기 편하다.
-	호출 할때마다 WITH절 안에 있는 쿼리를 숳애한다. 
+		FROM절에 사용하는 Subquery(Inline View)와 동일하고, 사용하기 편하다.
+		호출 할때마다 WITH절 안에 있는 쿼리를 수행한다. (Oracle Materialize 힌트 사용 시 예외적으로 한번만 수행)
+		조인 시 인덱스를 사용할 수 없다.
+		여러 번 호출되지 않도록 사용하는게 중요하다.
+	1) 재귀 쿼리 (Recursive 쿼리)
+```SQL
+WITH MENU_CTE(MENU_ID, LV, MENU_NM, MENU_PATH) AS (
+  SELECT MENU_ID, 1, CONVERT(VARCHAR(2000), MENU_NM), CONVERT(VARCHAR(2000), '/' + MENU_ID)
+  FROM TB_MENU
+  WHERE PARENT_MENU_ID IS NULL
+  UNION ALL
+  SELECT A.MENU_ID, B.LV + 1, CONVERT(VARCHAR(2000), REPLICATE(' ', (3*B.LV)) + A.MENU_NM), CONVERT(VARCHAR(2000), B.MENU_PATH + '/' + A.MENU_ID)
+  FROM TB_MENU A
+       INNER JOIN MENU_CTE B
+             ON A.PARENT_MENU_ID = B.MENU_ID
+)
+SELECT MENU_ID, LV, MENU_NM, MENU_PATH
+  FROM MENU_CTE
+ ORDER BY MENU_PATH;
+```
