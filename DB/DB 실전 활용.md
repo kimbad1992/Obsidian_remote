@@ -67,30 +67,23 @@ SELECT MENU_ID, LV, MENU_NM, MENU_PATH
  ORDER BY MENU_PATH;
 ```
 
-2024년 2월 1일부터 2024년 12월 31일
 
--- 공통 테이블 표현식(CTE) 선언
+### 예시
 
-WITH DateCTE AS (
+특정 날짜부터 ~까지 재귀 쿼리로 날짜 값 구하기
+```sql
+WITH DATE_CTE AS (  
+    SELECT CAST('2024-02-01' AS DATE) AS STARTDATE  
+    UNION ALL  
+    SELECT DATEADD(DAY, 1, STARTDATE)  
+    FROM DATE_CTE  
+    WHERE STARTDATE < '2024-12-31'  
+)  
+SELECT STARTDATE  
+FROM DATE_CTE  
+OPTION (MAXRECURSION 0); -- MSSQL 재귀 최대 횟수 지정
+```
 
--- 초기값 설정
+## Window Function
 
-SELECT CAST('2024-02-01' AS DATE) AS DateValue
-
-UNION ALL
-
--- 재귀적 쿼리 정의
-
-SELECT DATEADD(day, 1, DateValue)
-
-FROM DateCTE
-
-WHERE DateValue < '2024-12-31'
-
-)
-
--- 최종 결과 선택
-
-SELECT DateValue
-
-FROM DateCTE
+구조
