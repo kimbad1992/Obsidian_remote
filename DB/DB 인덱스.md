@@ -14,9 +14,7 @@
      2) Index 구조  
         - CREATE INDEX IDX_TB_MYBB_INTG_MBR_01 ON TB_MYBB_INTG_MBR (MBR_NAME ASC)
 
-
- 
-
+![[Pasted image 20240227140340.png]]
 
 ## 인덱스 상태 검사
 
