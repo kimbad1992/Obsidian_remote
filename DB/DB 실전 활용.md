@@ -244,3 +244,14 @@ create table order_new (
  partition order_part3 values ('03', '06', '09')
 );
 ```
+
+
+### SQL 튜닝의 사례
+
+#### 프로시저 튜닝
+
+1) 문제점
+	-  컬럼이 묵시적 형변환이 이루어짐
+	- 30초마다 1시간 범위의 많은 Data를 Merge Into를 하여 Table Lock이 자주 발생하게 됨
+2) 해결 방안
+	- 선언 
