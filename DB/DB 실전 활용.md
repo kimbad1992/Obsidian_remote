@@ -157,3 +157,24 @@ SELECT ORDER_NO, BRAND_CD, MARS_ID, AMOUNT, B_RANK, B_DENSE_RANK, B_ROW_NUMBER
 ```
 
 ### 집계 함수
+
+....
+
+---
+
+
+```sql
+-- Hash Join  
+SELECT A.INTG_MBR_ID, B.BRAND_CD, B.MARS_ID, C.BRAND_CD, C.ORDER_DATE, C.AMOUNT  
+FROM TB_MYBB_INTG_MBR A  
+         INNER JOIN TB_MYBB_BRAND_MBR B  
+                    ON A.INTG_MBR_ID =  B.INTG_MBR_ID  
+         INNER JOIN TB_MYBB_PURCHASE C  
+                    ON B.MARS_ID = C.MARS_ID  
+WHERE A.MBR_NAME = '최이로'
+
+-- C.MARS_ID에 Index를 걸면 Nested Loop Join으로 변경됨
+-- NL Join의 경우 Cost도 300 -> 0.5로 줄어든다
+-- 인덱스는 위와 같이 보통은 FK에 걸어주면 좋다
+```
+-- 
