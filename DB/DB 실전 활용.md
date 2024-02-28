@@ -192,7 +192,9 @@ WHERE A.MBR_NAME = '최이로'
 	- 파티션 키/값 변경에 대한 관리가 필요하다.
 	- 조건 절에 파티션 기준이 되는 컬럼이 없으면 속도가 느려진다.
 3) 종류
-	- Ranage Partition : 일, 월, 년 등과 같이 범위로 구분되는 Partition
+
+
+- Range Partition : 일, 월, 년 등과 같이 범위로 구분되는 Partition
 
 ```sql
 [ORACLE]  
@@ -209,3 +211,36 @@ create table order_new (
 );
 ```
 
+- Hash Partition : Hash 함수를 사용하여 분배하는 Partition
+
+```sql
+[ORACLE]  
+create table order_new (
+                        order_id number primary key,
+                        order_date date,
+                        customer_id number,
+                        order_amount number,
+                        order_store varchar(2)
+) partition by hash (order_date)
+(partition order_part1,
+ partition order_part2,
+ partition order_part3
+);
+```
+
+- List Partition : 단일 컬럼 값에 의해 구분되는 Partition
+
+```sql
+[ORACLE]  
+create table order_new (
+                        order_id number primary key,
+                        order_date date,
+                        customer_id number,
+                        order_amount number,
+                        order_store varchar(2)
+) partition by list (order_store)
+(partition order_part1 values ('01', '04', '07'),
+ partition order_part2 values ('02', '05', '08'),
+ partition order_part3 values ('03', '06', '09')
+);
+```
