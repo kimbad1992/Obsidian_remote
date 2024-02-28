@@ -178,3 +178,34 @@ WHERE A.MBR_NAME = '최이로'
 -- 인덱스는 위와 같이 보통은 FK에 걸어주면 좋다
 ```
 -- 
+
+## 파티션
+
+### 파티션 테이블
+
+특정 기준으로 테이블을 나눈다
+
+1) 장점
+	-  파티션 별 독립적으로 관리되어 백업, 삭제, 복원이 용이하다.
+	- 데이터 접근 시 범위를 줄여 쿼리 성능이 향상된다.
+2) 단점
+	- 파티션 키/값 변경에 대한 관리가 필요하다.
+	- 조건 절에 파티션 기준이 되는 컬럼이 없으면 속도가 느려진다.
+3) 종류
+	- Ranage Partition : 일, 월, 년 등과 같이 범위로 구분되는 Partition
+
+```sql
+[ORACLE]  
+create table order_new (
+                        order_id number primary key,
+                        order_date date,
+                        customer_id number,
+                        order_amount number,
+                        order_store varchar(2)
+) partition by range (order_date)
+(partition order_part1 values less than (to_date('2023-01-01','yyyy-mm-dd')),
+ partition order_part2 values less than (to_date('2023-07-01','yyyy-mm-dd')),
+ partition order_part3 values less than (to_date('2024-01-01','yyyy-mm-dd'))
+);
+```
+
