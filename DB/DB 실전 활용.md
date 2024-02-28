@@ -347,3 +347,6 @@ OFFSET
     (1 :: DECIMAL -1)*10 :: DECIMAL
     LIMIT 10 :: DECIMAL;
 ```
+
+조합 인덱스를 짤 때
+?
