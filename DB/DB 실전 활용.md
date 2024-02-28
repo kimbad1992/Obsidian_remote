@@ -254,4 +254,31 @@ create table order_new (
 	-  컬럼이 묵시적 형변환이 이루어짐
 	- 30초마다 1시간 범위의 많은 Data를 Merge Into를 하여 Table Lock이 자주 발생하게 됨
 2) 해결 방안
-	- 선언 
+	- 선언 변수의 Data Type 해당 테이블의 컬럼 Data Type으로 지정
+	- 1분에 3분 범위의 Data를 Merge Into를 하여 Table Lock 시간을 최소화
+
+```sql
+DECLARE  
+V_EVENT_DATE VARCHAR(8) = TO_CHAR(CURRENT_TIMESTAMP AT TIME ZONE 'UTC', 'YYYYMMDD')  
+V_EVENT_HHMM VARCHAR(4) = TO_CHAR(CURRENT_TIMESTAMP AT TIME ZONE 'UTC' - '60 minutes'::INTERVAL, 'HH24MI')  
+BEGIN  
+SELECT EVENT_DATE,
+       EVENT_HHMM,
+       SERVICE_CODE,
+       SERVICE_LAYER,
+       INSTANCE_ID,
+       SUM(SUCCESS_CNT) AS SUCCESS_CNT,
+       SUM(ERROR_CNT) AS ERROR_CNT,
+       SUM(CLOSE_CNT) AS CLOSE_CNT,
+~~~  
+FROM ZZT_LOG_HEADER
+WHERE EVENT_DATE = V_EVENT_DATE
+AND EVENT_HHMM >= V_EVENT_HHMM
+AND SERVICE_CODE IS NOT NULL
+GROUP BY EVENT_DATE, EVENT_HHMM, SERVICE_CODE, SERVICE_LAYER, INSTANCE_ID
+;
+~~~
+MERGE INTO ZZT_LOG_SUMMARY A
+USING  
+~~~
+```
