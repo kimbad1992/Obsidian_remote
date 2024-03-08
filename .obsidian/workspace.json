@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "61cb7e73039e10bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "서버 관리 기획.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/개인플젝 테스트.md",
+                "file": "서버 관리 기획.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/개인플젝 테스트.md",
+                "file": "서버 관리 기획.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/개인플젝 테스트.md"
+                "file": "서버 관리 기획.md"
               }
             }
           },
@@ -155,14 +168,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "64e6c080dca33fa5",
+  "active": "61cb7e73039e10bb",
   "lastOpenFiles": [
+    "React/개인플젝 테스트.md",
+    "서버 관리 기획.md",
     "DB/DB 실전 활용.md",
     "Pasted image 20240227140340.png",
     "Pasted image 20240227134656.png",
     "README.md",
     "React/Redux.md",
-    "React/개인플젝 테스트.md",
     "React/React 기초.md",
     "변경사항 리뷰.md",
     "React/React 빌드 후 스프링 프로젝트 결합.md",
