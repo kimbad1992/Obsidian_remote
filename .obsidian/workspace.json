@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/개인플젝 테스트.md",
+                "file": "DB/DB 실전 활용.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7d610cdf3def696d",
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "서버 관리 기획.md",
+                "file": "DB/DB 실전 활용.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "서버 관리 기획.md",
+                "file": "DB/DB 실전 활용.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "서버 관리 기획.md"
+                "file": "DB/DB 실전 활용.md"
               }
             }
           },
@@ -169,12 +167,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "61cb7e73039e10bb",
+  "active": "64e6c080dca33fa5",
   "lastOpenFiles": [
+    "DB/DB 유의사항.md",
+    "React/개인플젝 테스트.md",
+    "서버 관리 기획.md",
     "Pasted image 20240227140340.png",
     "Pasted image 20240227134656.png",
-    "서버 관리 기획.md",
-    "React/개인플젝 테스트.md",
     "DB/DB 실전 활용.md",
     "README.md",
     "React/Redux.md",
