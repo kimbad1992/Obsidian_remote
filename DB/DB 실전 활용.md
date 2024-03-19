@@ -362,6 +362,7 @@ OFFSET
 	"키5": ["밸류1","밸류2"]
 } map = new HashMap<String, Object>();
 
+String str = map.get("키1"); // 이 경우는 Return type error
 String str = (String) map.get("키1");
 Integer dks = (Integer) map.get("키3");
 List<String> list = (List<String>) map.get("키5");
