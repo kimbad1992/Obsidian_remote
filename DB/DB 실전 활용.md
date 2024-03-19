@@ -353,6 +353,16 @@ OFFSET
 
 ```json
 {
-	
-}
+	"키1": "밸류1",
+	"키2": "밸류2",
+	"키3": 3,
+	"키4": {
+		"키1": "밸류1"
+	},
+	"키5": ["밸류1","밸류2"]
+} map = new HashMap<String, Object>();
+
+String str = (String) map.get("키1");
+Integer dks = (Integer) map.get("키3");
+List<String> list = (List<String>) map.get("키5");
 ```
