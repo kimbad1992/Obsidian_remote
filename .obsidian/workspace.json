@@ -32,6 +32,16 @@
             }
           },
           {
+            "id": "ab7e97b716af6c09",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
+          },
+          {
             "id": "61cb7e73039e10bb",
             "type": "leaf",
             "state": {
@@ -44,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -180,7 +190,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "20f871edf2c898aa",
+  "active": "ab7e97b716af6c09",
   "lastOpenFiles": [
     "DB/DB 실전 활용.md",
     "작성.md",
