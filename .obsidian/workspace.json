@@ -35,9 +35,11 @@
             "id": "ab7e97b716af6c09",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.11"
+                "file": "React PWA.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -120,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "작성.md",
+                "file": "React PWA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "작성.md",
+                "file": "React PWA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "작성.md"
+                "file": "React PWA.md"
               }
             }
           },
@@ -192,17 +194,18 @@
   },
   "active": "ab7e97b716af6c09",
   "lastOpenFiles": [
+    "README.md",
+    "React PWA.md",
+    "Pasted image 20240227140340.png",
+    "Pasted image 20240227134656.png",
+    "변경사항 리뷰.md",
+    "서버 관리 기획.md",
     "DB/DB 실전 활용.md",
     "작성.md",
     "DB/DB 유의사항.md",
     "React/개인플젝 테스트.md",
-    "서버 관리 기획.md",
-    "Pasted image 20240227140340.png",
-    "Pasted image 20240227134656.png",
-    "README.md",
     "React/Redux.md",
     "React/React 기초.md",
-    "변경사항 리뷰.md",
     "React/React 빌드 후 스프링 프로젝트 결합.md",
     "2024-02-15.md",
     "무제 파일.canvas",
@@ -210,7 +213,6 @@
     "DB/락 조회용 쿼리.md",
     "Javascript/가로 스크롤에서 요소 중앙 정렬 시키기.md",
     "React",
-    "React PWA.md",
     "Programmers/Level 2 - 오픈 채팅방.md",
     "Programmers/Level 2 - 기능개발.md",
     "Programmers/Level 1 - 폰켓몬.md",
@@ -221,7 +223,6 @@
     "Programmers/Level 1 - 체육복.md",
     "Programmers/Level 1 - 완주하지 못한 선수.md",
     "Programmers/Level 1 - 실패율.md",
-    "Programmers/Level 1 - 신규 아이디 추천.md",
     "Programmers",
     "Others",
     "LLM",
